@@ -1,0 +1,178 @@
+    body {
+        background-color: #313131;
+        margin: 0;
+        padding: 0;
+    }
+
+    .tech-header {
+        position: relative;
+        width: 100%;
+        min-height: 120vh;
+        overflow: hidden;
+    }
+
+    .tech-header::before {
+        background-image: url('../images/fotos/Home/imagenes/centro_de_control.png');
+        background-size: 100% 100%;
+        /* Esto hará que la imagen tome el 100% del ancho */
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 0;
+        height: 100%;
+        /* Por encima del video */
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    /* Logo centrado */
+    .logo-container {
+        position: relative;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .video-container {
+        position: relative;
+        /* top: 50%; */
+        left: -1.5%;
+        width: 100%;
+        height: 25em;
+        /* margin: 0 auto; */
+        /* padding: 20px; */
+        /* transform: translateX(0%); */
+        transform: translateY(-15%);
+        z-index: -1;
+        /* background-color: teal; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        video {
+            position: absolute;
+            /* left: 50%; */
+            padding-left: 2.3%;
+            width: 50%;
+            height: 100%;
+            object-fit: cover;
+            background: teal;
+            /* display: block; */
+            border-radius: 8px;
+            z-index: -1;
+            /* transform: translateX(50%);
+            transform: translateY(-15%); */
+        }
+    }
+
+
+    .nav-container {
+        /* background-color: #313131; */
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* padding: 10px; */
+        transform: translateY(-110%);
+        /* gap: 5px; */
+        z-index: 1;
+
+        a img {
+            width: 160px;
+            height: 60px;
+            color: #fff;
+            /* text-decoration: none; */
+            /* font-size: 1.2em; */
+            /* font-weight: bold; */
+            margin: 0 0 0 20px;
+            /* padding: 20px 30px; */
+            border-radius: 40%;
+            /* background-color: #000; */
+            transition: background-color 0.3s ease;
+        }
+
+        .button-center {
+            /* background-color: #b41d1d; */
+            border-radius: 5px;
+            /* padding: 20px 30px; */
+            transform: translateY(-40%);
+        }
+
+    }
+
+
+    .novedades {
+        width: 100%;
+        height: 200vh;
+        background-image: url('../images/fotos/Home/imagenes/piso.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: sticky;
+        z-index: -1;
+        transform: translateY(-23%);
+    }
+
+    .instagram-feed {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+        justify-items: center;
+    }
+
+    /* Ajustes para el iframe de Instagram */
+    .instagram-media {
+        background: transparent !important;
+        border: none !important;
+        border-radius: 15px !important;
+        box-shadow: 0 0 15px rgba(0, 247, 255, 0.2) !important;
+        margin: 0 !important;
+        max-width: 320px !important;
+    }
+
+
+    .controls {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    /* Ajustes adicionales para la sección hero */
+    .hero {
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        z-index: 0;
+    }
+
+    .de-interes {
+        background-image: url('../images/fotos/Home/imagenes/final_de_la_nave.png');
+        background-size: cover;
+        size-adjust: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: 5;
+    }
+
+    /* Estilos para el botón de WhatsApp */
+    .whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        transition: transform 0.3s ease;
+    }
+
+    .whatsapp:hover {
+        transform: scale(1.1);
+    }
+
+    .whatsapp img {
+        width: 60px;
+        height: 60px;
+        filter: drop-shadow(0 0 10px rgba(37, 211, 102, 0.5));
+    }

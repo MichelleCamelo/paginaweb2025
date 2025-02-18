@@ -2,7 +2,7 @@ body {
   /* Configuracion general de la pagina */
   background-color: #314c9c;
   overflow-x: hidden;
-  min-height: 100vh;
+  height: 100vh;
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
@@ -14,9 +14,11 @@ body {
   width: 100%;
   height: 100vh;
   background-image: url("../images/fotos/Home/imagenes/centro_de_control.png");
-  background-position: cover;
+  /* background-position: cover; */
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  object-fit: cover;
+  object-position: center;
   /* Estilos del logo centrado */
   .logo-container {
     position: relative;
@@ -52,7 +54,7 @@ body {
     height: 35vh;
     object-fit: cover;
     /* background: teal; */
-    border-radius: 40px;
+    border-radius: 3rem;
   }
 }
 
@@ -66,16 +68,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 1.563rem;
 
   a img {
-    width: 140px;
-    height: 50px;
+    width: 8.75rem;
+    height: 3.125rem;
     border-radius: 40%;
   }
 
   .button-center {
-    border-radius: 5px;
+    border-radius: 0.313rem;
     margin-top: -8%; /* Reemplaza translateY */
   }
 }
@@ -87,20 +89,22 @@ body {
 /* Estilos de la seccion de novedades */
 .novedades {
   width: 100%;
-  min-height: 75em;
+  height: 75rem;
   background-image: url("../images/fotos/Home/imagenes/piso.png");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
   z-index: 0;
-  margin-top: -15em;
-  margin-bottom: 0em;
+  object-fit: cover;
+  object-position: center;
+  margin-top: -15rem;
+  margin-bottom: 0rem;
   padding-bottom: 55vh; /* Espacio para el footer */
 
   h2 {
     position: absolute;
-    top: 7.7em; /* Reemplaza translateY */
+    top: 15rem; /* Reemplaza translateY */
     width: 100%;
     z-index: 4;
     background-color: white;
@@ -113,10 +117,10 @@ body {
 }
 
 /* Estilos del carousel de novedades */
-.container-carousel {
+.carousel-container {
   position: absolute;
   z-index: 4;
-  top: 35%; /* Reemplaza translateY */
+  top: 35%;
   left: 50%;
   transform: translateX(-50%);
   width: 105vh;
@@ -125,39 +129,38 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 60px;
-  /* background-color: black; */
+  border-radius: 3.75rem;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  .carouseles {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 46vw;
-    height: 93vh;
-    overflow: hidden;
-    transition: transform 0.5s ease-in-out;
-    background-color: rgb(0, 0, 0);
-    border-radius: 50px;
-  }
-  .carousel-item {
-    min-width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 }
-/* Ajustes para el iframe de Instagram */
-.instagram-media {
-  background: transparent;
-  border: none;
-  max-width: 95% !important;
-  height: 95% !important;
-  border-radius: 20px;
+.carousel {
+  position: absolute;
+  z-index: 4;
+  top: 7%;
+  width: 100vh;
+  height: 93vh;
   overflow: hidden;
+  border-radius: 3rem;
+  /* Contenedor del carousel */
+  .reel-container {
+    display: flex; /* Asegura que los reels estén en fila */
+    width: 70%;
+    height: 90%;
+    transition: transform 0.5s ease-in-out;
+    /* overflow: hidden; */
+    gap: 4rem;
+  }
+  /* Cada reel debe ocupar el 100% del carousel */
+  .instagram-media {
+    width: 100%; /* Cada reel ocupa TODO el ancho del viewport */
+    height: 100%;
+    flex: 0 0 100%; /* Asegura que cada uno tome todo el espacio de la caja del elemento padre, ESTA ES LA CLAVE PARA QUE SE VEA DE A UN REEL*/
+    border-radius: 1.25rem;
+    border: none;
+  }
 }
 /* Estilos de los botones del carousel */
 .button-prev,
@@ -171,7 +174,7 @@ body {
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
-  border-radius: 100px;
+  border-radius: 6.25rem;
   img {
     width: 10vw;
     height: 19vh;
@@ -192,15 +195,15 @@ body {
 /* Estilos de la seccion de De Interés */
 .de-interes {
   width: 100%;
-  height: 20em;
+  height: 20rem;
   background-image: url("../images/fotos/Home/imagenes/final_de_la_nave.png");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
-  gap: 18em;
-  padding-top: 1em;
+  gap: 18rem;
+  padding-top: 1rem;
 
   /* Columnas del footer */
   section {
@@ -217,30 +220,30 @@ body {
     justify-content: center;
   }
 
-   ul {
+  ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
 
-   li {
+  li {
     margin: 0.5rem 0;
   }
 
-   a {
+  a {
     color: #fff;
     text-decoration: none;
   }
-  
+
   /* Redes sociales */
   .redes-sociales {
     display: flex;
     justify-content: center;
   }
   .redes-sociales a {
-    width: 5em;
-    height: 5em;
-    margin-top: 0.5em;
+    width: 5rem;
+    height: 5rem;
+    margin-top: 0.5rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -258,13 +261,13 @@ body {
   flex-direction: column;
   position: fixed;
   bottom: 25%;
-  right: 2px;
+  right: 0.125rem;
   z-index: 5;
   transition: transform 0.3s ease;
   img {
-    margin-top: 10px;
-    width: 7em;
-    height: 7em;
+    margin-top: 0.625rem;
+    width: 7rem;
+    height: 7rem;
     filter: drop-shadow(0 0 10px rgb(93, 189, 204));
   }
 }
@@ -273,4 +276,4 @@ body {
 }
 .dominik-icon:hover {
   transform: scale(1.1);
-} 
+}

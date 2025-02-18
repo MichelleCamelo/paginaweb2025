@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const reelContainer = document.querySelector(".carouseles");
+  const reelContainer = document.querySelector(".reel-container");
   const reels = document.querySelectorAll(".instagram-media");
   const prevBtn = document.querySelector(".button-prev");
   const nextBtn = document.querySelector(".button-next");
   let currentIndex = 0;
   let autoChangeInterval;
 
-  // Función para mostrar el Reel actual
+  // Función para mostrar el Reel actual con desplazamiento horizontal
   function showReel(index) {
-    const offset = -index * 90;
+    const offset = -index * 100; // Mueve los reels horizontalmente
     reelContainer.style.transform = `translateX(${offset}%)`;
   }
 
@@ -24,12 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
     showReel(currentIndex);
   }
 
-  // Función para iniciar el cambio automático
+  // Inicia el cambio automático de reels
   function startAutoChange() {
-    autoChangeInterval = setInterval(nextReel, 5000); // Cambia cada 5 segundos
+    autoChangeInterval = setInterval(nextReel, 5000);
   }
 
-  // Función para detener el cambio automático
+  // Detiene el cambio automático
   function stopAutoChange() {
     clearInterval(autoChangeInterval);
   }
@@ -47,6 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
     startAutoChange();
   });
 
-  // Iniciar el cambio automático al cargar la página
+  // Iniciar el carrusel al cargar la página
   startAutoChange();
 });

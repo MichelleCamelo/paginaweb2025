@@ -42,41 +42,19 @@ define('SITE_URL', 'https://starpark.com.co');
     <!-- Contenedor del main -->
     <main class="novedades">
         <h2>Novedades</h2>
-        <article class="container-carousel">
-            <div class="carouseles">
-                <!-- Aquí pegas los códigos de inserción de Instagram -->
-                <section class="carousel-item instagram-media">
-                    <blockquote class="carousel-item instagram-media"
-                        data-instgrm-permalink="https://www.instagram.com/reel/DEQh-1jupwM/?igsh=eGdra2JmcDhnMGpn">
-                    </blockquote>
-                </section>
-                <section class="carousel-item instagram-media">
-                    <blockquote class="carousel-item instagram-media"
-                        data-instgrm-permalink="https://www.instagram.com/reel/DD0MMSvSQtD/?igsh=cTBqbzRtN3A0dTdz">
-                    </blockquote>
-                </section>
-                <section class="carousel-item instagram-media">
-                    <blockquote class="carousel-item instagram-media"
-                        data-instgrm-permalink="https://www.instagram.com/p/DE0hisES2Lp/?igsh=YjUxNnB1Zzlza2ts">
-                    </blockquote>
-                </section>
-                <section class="carousel-item instagram-media">
-                    <blockquote class="carousel-item instagram-media"
-                        data-instgrm-permalink="https://www.instagram.com/reel/CxwKZFwszUB/?igsh=b3IxZXlmZnh3NXBj">
-                    </blockquote>
-                </section>
-                <section class="carousel-item instagram-media">
-                    <blockquote class="carousel-item instagram-media"
-                        data-instgrm-permalink="https://www.instagram.com/reel/DCc8U42xSkN/?igsh=ZmVkbXBhbDI0anpt">
-                    </blockquote>
-                </section>
-                <section class="carousel-item instagram-media">
-                    <blockquote class="carousel-item instagram-media"
-                        data-instgrm-permalink="https://www.instagram.com/reel/DCIc-ELNlGL/?igsh=MXdhNnA5Z3k0MG1qNQ==">
-                    </blockquote>
-                </section>
-            </div>
-        </article>
+        <div class="carousel-container">
+            <article class="carousel">
+                <div class="reel-container">
+                    <!-- Aquí pegas los códigos de inserción de Instagram -->
+                    <iframe class="instagram-media" src="https://www.instagram.com/reel/DEQh-1jupwM/embed"></iframe>
+                    <iframe class="instagram-media" src="https://www.instagram.com/reel/DD0MMSvSQtD/embed"></iframe>
+                    <iframe class="instagram-media" src="https://www.instagram.com/p/DE0hisES2Lp/embed"></iframe>
+                    <iframe class="instagram-media" src="https://www.instagram.com/reel/CxwKZFwszUB/embed"></iframe>
+                    <iframe class="instagram-media" src="https://www.instagram.com/reel/DCc8U42xSkN/embed"></iframe>
+                    <iframe class="instagram-media" src="https://www.instagram.com/reel/DCIc-ELNlGL/embed"></iframe>
+                </div>
+            </article>
+        </div>
         <button class="button-next"><img src="images/fotos/Home/Botones/derecha.png" alt="flechaDerecha">
         </button>
         <button class="button-prev"><img src="images/fotos/Home/Botones/izquierda.png" alt="flechaIzquierda">

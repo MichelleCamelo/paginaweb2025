@@ -5,6 +5,7 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 /* Estilos del header */
@@ -117,50 +118,60 @@ body {
 }
 
 /* Estilos del carousel de novedades */
-.carousel-container {
+.imagen-fondo {
   position: absolute;
   z-index: 4;
   top: 35%;
   left: 50%;
   transform: translateX(-50%);
-  width: 105vh;
-  height: 98vh;
-  background-image: url("../images/fotos/Home/imagenes/instagram_marco.png");
-  background-size: cover;
+  width: 90rem;
+  height: 50rem;
+   /* background-image: url("../images/fotos/Home/imagenes/instagram_marco.png");  */
+   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; 
   border-radius: 3.75rem;
-  background-color: black;
+  background-color: #314c9c; 
+  box-shadow: 0 8px 32px 0 rgba(63, 149, 175, 0.726); 
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
-.carousel {
-  position: absolute;
-  z-index: 4;
-  top: 7%;
-  width: 100vh;
-  height: 93vh;
-  overflow: hidden;
-  border-radius: 3rem;
-  /* Contenedor del carousel */
-  .reel-container {
-    display: flex; /* Asegura que los reels estén en fila */
-    width: 70%;
+ .container-carousel {
+    width: 90%;
     height: 90%;
-    transition: transform 0.5s ease-in-out;
-    /* overflow: hidden; */
-    gap: 4rem;
-  }
-  /* Cada reel debe ocupar el 100% del carousel */
-  .instagram-media {
-    width: 100%; /* Cada reel ocupa TODO el ancho del viewport */
+    border-radius: 0.938rem;
+    background-color: #63319c;
+    overflow: hidden;
+    position: relative;
+}
+.carruseles {
+    width: 600%;
     height: 100%;
-    flex: 0 0 100%; /* Asegura que cada uno tome todo el espacio de la caja del elemento padre, ESTA ES LA CLAVE PARA QUE SE VEA DE A UN REEL*/
-    border-radius: 1.25rem;
-    border: none;
-  }
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    cursor: grab;
+}
+.carruseles:active {
+    cursor: grabbing;
+}
+.slider-section {
+    width: calc(100% / 6);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+    opacity: 0.5;
+}
+.slider-section.active {
+    opacity: 1;
+}
+.slider-section iframe {
+    width: 23rem; 
+    object-fit: cover;
+    border-radius: 0.938rem;
 }
 /* Estilos de los botones del carousel */
 .button-prev,

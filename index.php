@@ -15,8 +15,8 @@ define('SITE_URL', 'https://starpark.com.co');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo SITE_NAME; ?></title>
     <link rel="stylesheet" href="./css/styles.css?v=<?php echo time(); ?>">
+    <script defer src="carousel.js"></script>
     <meta name="theme-color" content="#314c9c">
-    <script src="carousel.js"></script>
 </head>
 
 <body>
@@ -40,26 +40,43 @@ define('SITE_URL', 'https://starpark.com.co');
         </nav>
     </header>
     <!-- Contenedor del main -->
-    <main class="novedades">
+    <div class="novedades">
         <h2>Novedades</h2>
-        <div class="carousel-container">
-            <article class="carousel">
-                <div class="reel-container">
-                    <!-- Aquí pegas los códigos de inserción de Instagram -->
-                    <iframe class="instagram-media" src="https://www.instagram.com/reel/DEQh-1jupwM/embed"></iframe>
-                    <iframe class="instagram-media" src="https://www.instagram.com/reel/DD0MMSvSQtD/embed"></iframe>
-                    <iframe class="instagram-media" src="https://www.instagram.com/p/DE0hisES2Lp/embed"></iframe>
-                    <iframe class="instagram-media" src="https://www.instagram.com/reel/CxwKZFwszUB/embed"></iframe>
-                    <iframe class="instagram-media" src="https://www.instagram.com/reel/DCc8U42xSkN/embed"></iframe>
-                    <iframe class="instagram-media" src="https://www.instagram.com/reel/DCIc-ELNlGL/embed"></iframe>
+        <main class="imagen-fondo"> <!-- id = Carousel-slider-->
+            <article class="container-carousel"> <!-- No tenia ninguna clase-->    
+                <div class="carruseles" id="slider"> <!-- class = Carousel-slider-->
+                    <!-- POST DE INSTAGRAM -->
+                    <section class="slider-section">
+                        <iframe class="instagram-media" src="https://www.instagram.com/reel/DEQh-1jupwM/embed"></iframe>
+                    </section>
+                    <section class="slider-section">
+                        <iframe class="instagram-media" src="https://www.instagram.com/reel/DD0MMSvSQtD/embed"></iframe>
+                    </section>
+                    <section class="slider-section">
+                        <iframe class="instagram-media" src="https://www.instagram.com/p/DE0hisES2Lp/embed"></iframe>
+                    </section>
+                    <section class="slider-section">
+                        <iframe class="instagram-media" src="https://www.instagram.com/reel/CxwKZFwszUB/embed"></iframe>
+                    </section>
+                    <section class="slider-section">
+                        <iframe class="instagram-media" src="https://www.instagram.com/reel/DCc8U42xSkN/embed"></iframe>
+                    </section>
+                    <section class="slider-section">
+                        <iframe class="instagram-media" src="https://www.instagram.com/reel/DCIc-ELNlGL/embed"></iframe>
+                    </section>
                 </div>
             </article>
-        </div>
-        <button class="button-next"><img src="images/fotos/Home/Botones/derecha.png" alt="flechaDerecha">
+            <!-- BOTONES -->
+        </main>
+        <button class="button-next">
+            <img src="images/fotos/Home/Botones/derecha.png" alt="flechaDerecha" />
         </button>
-        <button class="button-prev"><img src="images/fotos/Home/Botones/izquierda.png" alt="flechaIzquierda">
+        <button class="button-prev">
+            <img src="images/fotos/Home/Botones/izquierda.png" alt="flechaIzquierda" />
         </button>
-    </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/micro-slider@1.0.9/dist/micro-slider.min.js"></script>
+    </div>
     <!-- Script de Instagram (agrégalo al final de tu página) -->
     <script async src="//www.instagram.com/embed.js"></script>
     <!-- Botones de whatsapp y dominick, lado derecho -->

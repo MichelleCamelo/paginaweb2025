@@ -1,52 +1,29 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const reelContainer = document.querySelector(".reel-container");
-  const reels = document.querySelectorAll(".instagram-media");
-  const prevBtn = document.querySelector(".button-prev");
-  const nextBtn = document.querySelector(".button-next");
-  let currentIndex = 0;
-  let autoChangeInterval;
+const btnRight = document.querySelector(".button-next"),
+    btnLeft = document.querySelector(".button-prev"),
+    slider = document.querySelector("#slider"),
+    sliderIframes = document.querySelectorAll(".slider-section"); /**cantidad de post */
 
-  // Función para mostrar el Reel actual con desplazamiento horizontal
-  function showReel(index) {
-    const offset = -index * 100; // Mueve los reels horizontalmente
-    reelContainer.style.transform = `translateX(${offset}%)`;
-  }
+btnRight.addEventListener("click", () => moveSlider(1));
+btnLeft.addEventListener("click", () => moveSlider(-1));
 
-  // Función para avanzar al siguiente Reel
-  function nextReel() {
-    currentIndex = (currentIndex + 1) % reels.length;
-    showReel(currentIndex);
-  }
+let operacion = 0, // Controla el porcentaje de desplazamiento
+    counter = 0, // Controla la posición actual
+    widthImg = 100 / sliderIframes.length; // Calcula el ancho de cada slide en porcentaje
 
-  // Función para retroceder al Reel anterior
-  function prevReel() {
-    currentIndex = (currentIndex - 1 + reels.length) % reels.length;
-    showReel(currentIndex);
-  }
-
-  // Inicia el cambio automático de reels
-  function startAutoChange() {
-    autoChangeInterval = setInterval(nextReel, 5000);
-  }
-
-  // Detiene el cambio automático
-  function stopAutoChange() {
-    clearInterval(autoChangeInterval);
-  }
-
-  // Eventos para los botones de navegación
-  nextBtn.addEventListener("click", () => {
-    nextReel();
-    stopAutoChange();
-    startAutoChange();
-  });
-
-  prevBtn.addEventListener("click", () => {
-    prevReel();
-    stopAutoChange();
-    startAutoChange();
-  });
-
-  // Iniciar el carrusel al cargar la página
-  startAutoChange();
-});
+function moveSlider(direction) {
+    // direction: 1 para derecha, -1 para izquierda
+    counter += direction;
+    
+    // Manejar el caso circular
+    if (counter >= sliderIframes.length || counter < 0) {
+        // Si llegamos al final o al inicio, reiniciamos
+        counter = direction > 0 ? 0 : sliderIframes.length - 1;
+        operacion = counter * widthImg;
+        slider.style.transition = "none";
+    } else {
+        operacion = counter * widthImg;
+        slider.style.transition = "all ease .36s";
+    }
+    
+    slider.style.transform = `translate(-${operacion}%)`;
+}

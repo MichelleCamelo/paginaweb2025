@@ -39,6 +39,77 @@
     }
   }
 }
+/* Menu lateral  */
+.sidebar-menu {
+    position: fixed;
+    width: 15.625rem;
+    height: 100%;
+    top: 0;
+    right: 0;
+    /* right: -250px; */
+    background-color: #400645;
+    z-index: 1000;
+    transition: right 0.3s ease-in-out;
+    padding-top: 60px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .sidebar-menu.active {
+    right: 0;
+  }
+  
+  .sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-menu li {
+    padding: 15px 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .sidebar-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    transition: color 0.2s;
+  }
+  
+  .sidebar-menu a:hover {
+    color: #00b2ff;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+  }
+  
+  .overlay.active {
+    display: block;
+  }
+  
+  /* Make hamburger menu clickable */
+  .hamburger-menu {
+    cursor: pointer;
+    z-index: 1001;
+  }
 /* Seccion de los parques */
 .location-section {
   position: relative;

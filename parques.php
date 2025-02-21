@@ -10,6 +10,7 @@ require_once 'includes/config.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="./css/parques.css?v=<?php echo time(); ?>">
+    <script defer src="hamburgMenu.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Document</title>
 </head>
@@ -17,15 +18,19 @@ require_once 'includes/config.php';
 <body>
     <main class="space-background">
         <nav class="navigation-container">
-            <img src="images/fotos/Parques/botones/starpark.png" alt="LogoStarPark">
-            <div class="hamburger-menu">
-                <i class="fa-sharp fa-solid fa-bars"></i>
-                <div class="hamburger-box">
-                    <div class="hamburger-line"></div>
-                    <div class="hamburger-line"></div>
-                    <div class="hamburger-line"></div>
-                </div>
-            </div>
+            <a href="index.php">
+                <img src="images/fotos/Parques/botones/starpark.png" alt="LogoStarPark">
+            </a>
+            <section class="sidebar-menu">
+                <div class="close-btn">&times;</div>
+                <ul>
+                    <li><a href="index.php">Inicio</a></li>
+                    <!-- <li><a href="parques.php">Parques</a></li> -->
+                    <li><a href="servicios.php">Servicios</a></li>
+                    <li><a href="contacto.php">Contacto</a></li>
+                </ul>
+            </section>
+            <div class="overlay"></div>
         </nav>
         <article class="starpark-locations location-section">
             <!-- Bogotá Central -->

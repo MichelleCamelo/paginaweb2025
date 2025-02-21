@@ -1,11 +1,11 @@
-<?php
+<!-- <?php
 
 // config.php - Configuraciones generales
 define('SITE_NAME', 'Star Park');
 define('SITE_URL', 'https://starpark.com.co');
 
 // header.php
-?>
+?> -->
 <!DOCTYPE html>
 <html lang="es">
 
@@ -15,6 +15,7 @@ define('SITE_URL', 'https://starpark.com.co');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo SITE_NAME; ?></title>
     <link rel="stylesheet" href="./css/styles.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="./css/pagInicio.css?v=<?php echo time(); ?>">
     <script defer src="carousel.js"></script>
     <meta name="theme-color" content="#314c9c">
 </head>
@@ -40,45 +41,39 @@ define('SITE_URL', 'https://starpark.com.co');
         </nav>
     </header>
     <!-- Contenedor del main -->
-    <div class="novedades">
-        <h2>Novedades</h2>
-        <main class="imagen-fondo"> <!-- id = Carousel-slider-->
-            <article class="container-carousel"> <!-- No tenia ninguna clase-->    
-                <div class="carruseles" id="slider"> <!-- class = Carousel-slider-->
-                    <!-- POST DE INSTAGRAM -->
-                    <section class="slider-section">
-                        <iframe class="instagram-media" src="https://www.instagram.com/reel/DEQh-1jupwM/embed"></iframe>
-                    </section>
-                    <section class="slider-section">
-                        <iframe class="instagram-media" src="https://www.instagram.com/reel/DD0MMSvSQtD/embed"></iframe>
-                    </section>
-                    <section class="slider-section">
-                        <iframe class="instagram-media" src="https://www.instagram.com/p/DE0hisES2Lp/embed"></iframe>
-                    </section>
-                    <section class="slider-section">
-                        <iframe class="instagram-media" src="https://www.instagram.com/reel/CxwKZFwszUB/embed"></iframe>
-                    </section>
-                    <section class="slider-section">
-                        <iframe class="instagram-media" src="https://www.instagram.com/reel/DCc8U42xSkN/embed"></iframe>
-                    </section>
-                    <section class="slider-section">
-                        <iframe class="instagram-media" src="https://www.instagram.com/reel/DCIc-ELNlGL/embed"></iframe>
-                    </section>
+    <main class="carousel-container"> <!-- Contenedor principal del carrusel -->
+        <div class="title-novedades">
+            <img src="images/fotos/Home/Botones/Novedades.png" alt="Novedades"> <!-- Titulo del carrusel -->
+        </div>
+        <div class="carousel"> <!-- Contenedor del carrusel -->
+            <div class="carousel-items"> <!-- Contenedor de los items del carrusel -->
+                <div class="carousel-item active"> <!-- Item activo -->
+                    <iframe class="instagram-media" src="https://www.instagram.com/reel/DEQh-1jupwM/embed"></iframe>
                 </div>
-            </article>
-            <!-- BOTONES -->
-        </main>
-        <button class="button-next">
-            <img src="images/fotos/Home/Botones/derecha.png" alt="flechaDerecha" />
-        </button>
-        <button class="button-prev">
-            <img src="images/fotos/Home/Botones/izquierda.png" alt="flechaIzquierda" />
-        </button>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/micro-slider@1.0.9/dist/micro-slider.min.js"></script>
-    </div>
-    <!-- Script de Instagram (agrégalo al final de tu página) -->
-    <script async src="//www.instagram.com/embed.js"></script>
+                <div class="carousel-item">
+                    <iframe class="instagram-media" src="https://www.instagram.com/reel/DD0MMSvSQtD/embed"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <iframe class="instagram-media" src="https://www.instagram.com/p/DE0hisES2Lp/embed"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <iframe class="instagram-media" src="https://www.instagram.com/reel/CxwKZFwszUB/embed"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <iframe class="instagram-media" src="https://www.instagram.com/reel/DCc8U42xSkN/embed"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <iframe class="instagram-media" src="https://www.instagram.com/reel/DCIc-ELNlGL/embed"></iframe>
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <button class="carousel-prev" aria-label="Anterior">&lt;</button>
+                <div class="carousel-indicators"></div>
+                <button class="carousel-next" aria-label="Siguiente">&gt;</button>
+            </div>
+        </div>
+    </main>
     <!-- Botones de whatsapp y dominick, lado derecho -->
     <aside class="enlaces-derecha">
         <a href="https://wa.me/573118090610" class="whatsapp" target="_blank">

@@ -1,0 +1,314 @@
+  /* Estilos del header */
+  .background-header {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/fotos/Home/imagenes/centro_de_control.png");
+    /* background-position: cover; */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    object-fit: cover;
+    object-position: center;
+    /* Estilos del logo centrado */
+    .logo-container {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 40vw;
+        height: 14vh;
+        position: relative;
+        left: -1.6%; /* Reemplaza transform con left */
+      }
+    }
+  }
+  
+  /* Estilos del video centrado */
+  .video-container {
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translatex(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+  
+    video {
+      position: relative;
+      left: 1.5%; /* Reemplaza translateX */
+      z-index: 0;
+      width: 44vw;
+      height: 38vh;
+      object-fit: cover;
+      /* background: teal; */
+      border-radius: 3rem;
+    }
+  }
+  
+  /* Estilos de los botones de navegacion */
+  .nav-container {
+    position: absolute;
+    top: 52%; /* Reemplaza translateY */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.563rem;
+  
+    a img {
+      width: 8.75rem;
+      height: 3.125rem;
+      border-radius: 40%;
+    }
+  
+    .button-center {
+      border-radius: 0.313rem;
+      margin-top: -8%; /* Reemplaza translateY */
+    }
+  }
+  .nav-container a img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Estilos de carousel-container */
+  .carousel-container {
+    width: 100%;
+    height: 75rem;
+    background-image: url("../images/fotos/Home/imagenes/piso.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+    object-fit: cover;
+    object-position: center;
+    margin-top: -15rem;
+    margin-bottom: 0rem;
+    padding: 1.25rem;
+    padding-bottom: 55vh; /* Espacio para el footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  .title-novedades {
+    width: 100%;
+    height: 10rem;
+    position: absolute;
+    top: 20rem; /* Reemplaza translateY */
+    width: 100%;
+    z-index: 4;
+    /* background-size: cover; */
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .carousel {
+    top: 20rem;
+    width: 90vw; /*Se puede ajustar el tamaño del container para las tarjetas*/
+    height: 48rem;
+    position: relative;
+    perspective: 62.5rem;
+    background-color: #5f77b8;
+    
+    border-radius: 1.25rem;
+    overflow: hidden;
+  }
+  
+  .carousel-items {
+    width: 100%;
+    height: 42rem;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-out;
+  }
+  
+  .carousel-item {
+    position: absolute;
+    width: 23rem;
+    height: 90%;
+    top: 5%;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 1.875rem rgba(96, 122, 118, 0.5);
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    transform: scale(0.8) translateY(0) translateZ(-400px);
+    z-index: 0;
+    object-fit: contain;
+  }
+  
+  .carousel-item.prev {
+    opacity: 0.7;
+    transform: scale(0.85) translateX(-80%) translateY(0) translateZ(-100px);
+    z-index: 2;
+  }
+  
+  .carousel-item.active {
+    opacity: 1;
+    transform: scale(1) translateX(0) translateY(0) translateZ(0);
+    z-index: 5;
+    box-shadow: 0 15px 35px rgba(56, 236, 236, 0.863);
+  }
+  
+  .carousel-item.next {
+    opacity: 0.7;
+    transform: scale(0.85) translateX(80%) translateY(0) translateZ(-100px);
+    z-index: 2;
+  }
+  
+  .carousel-item.far-prev {
+    opacity: 0.3;
+    transform: scale(0.7) translateX(-150%) translateY(0) translateZ(-200px);
+    z-index: 1;
+  }
+  
+  .carousel-item.far-next {
+    opacity: 0.3;
+    transform: scale(0.7) translateX(150%) translateY(0) translateZ(-200px);
+    z-index: 1;
+  }
+  
+  .carousel-item.back {
+    opacity: 0.3;
+    transform: scale(0.6) translateY(10%) translateZ(-300px);
+    z-index: 0;
+  }
+  
+  .instagram-media {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 1rem;
+  }
+  
+  .carousel-controls {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    z-index: 10;
+  }
+  
+  .carousel-prev,
+  .carousel-next {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 0.125rem 10px rgb(99, 181, 192);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel-prev:hover,
+  .carousel-next:hover {
+    background: rgb(181, 221, 221);
+    transform: scale(1.1);
+  }
+  
+  .carousel-indicators {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .indicator {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .indicator.active {
+    background: rgb(124, 187, 187);
+    transform: scale(1.2);
+  }
+  
+  /* Añadimos estilos para dispositivos móviles */
+  @media (width: 768px) {
+    .carousel-item {
+      width: 85%;
+      height: 60%;
+    }
+    
+    .carousel-item.prev {
+      transform: scale(0.8) translateX(-60%) translateY(0) translateZ(-100px);
+    }
+    
+    .carousel-item.next {
+      transform: scale(0.8) translateX(60%) translateY(0) translateZ(-100px);
+    }
+    
+    .carousel-item.far-prev {
+      transform: scale(0.7) translateX(-110%) translateY(0) translateZ(-200px);
+    }
+    
+    .carousel-item.far-next {
+      transform: scale(0.7) translateX(110%) translateY(0) translateZ(-200px);
+    }
+    
+    .carousel-prev,
+    .carousel-next {
+      width: 40px;
+      height: 40px;
+      font-size: 1.25rem;
+    }
+  }
+  /* Estilos whatsapp y dominik icon*/
+  
+  .enlaces-derecha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    bottom: 25%;
+    right: 0.125rem;
+    z-index: 5;
+    transition: transform 0.3s ease;
+    img {
+      margin-top: 0.625rem;
+      width: 7rem;
+      height: 7rem;
+      filter: drop-shadow(0 0 10px rgb(93, 189, 204));
+    }
+  }
+  .whatsapp:hover {
+    transform: scale(1.1);
+  }
+  .dominik-icon:hover {
+    transform: scale(1.1);
+  }
+  

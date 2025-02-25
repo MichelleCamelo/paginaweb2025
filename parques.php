@@ -11,27 +11,32 @@ require_once 'includes/config.php';
     <link rel="stylesheet" href="./css/styles.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="./css/parques.css?v=<?php echo time(); ?>">
     <script defer src="hamburgMenu.js"></script>
+    <title><?php echo SITE_NAME; ?></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Document</title>
 </head>
-
 <body>
     <main class="space-background">
         <nav class="navigation-container">
             <a href="index.php">
                 <img src="images/fotos/Parques/botones/starpark.png" alt="LogoStarPark">
             </a>
-            <section class="sidebar-menu">
-                <div class="close-btn">&times;</div>
-                <ul>
-                    <li><a href="index.php">Inicio</a></li>
-                    <!-- <li><a href="parques.php">Parques</a></li> -->
-                    <li><a href="servicios.php">Servicios</a></li>
-                    <li><a href="contacto.php">Contacto</a></li>
-                </ul>
-            </section>
-            <div class="overlay"></div>
+            <div class="hamburger-menu">
+                <i class="fa-sharp fa-solid fa-bars"></i>
+            </div>
         </nav>
+
+        <div class="sidebar-menu">
+            <div class="close-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <ul>
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="parques.php">Parques</a></li>
+                <li><a href="servicios.php">Servicios</a></li>
+                <li><a href="contacto.php">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="overlay"></div>
         <article class="starpark-locations location-section">
             <!-- Bogotá Central -->
             <section class="location-central">
@@ -124,6 +129,16 @@ require_once 'includes/config.php';
             </section>
         </article>
     </main>
+    <!-- Botones de whatsapp y dominick, lado derecho -->
+    <aside class="enlaces-derecha">
+        <a href="https://wa.me/573118090610" class="whatsapp" target="_blank">
+            <img src="images/fotos/Home/Botones/whatsapp.png" alt="WhatsApp">
+        </a>
+        <a href="#" class="dominik-icon" target="_blank">
+            <img src="images/fotos/Home/Botones/dominik.png" alt="Dominick">
+        </a>
+    </aside>
+    <!-- Footer -->
     <footer class="de-interes">
         <section class="enlaces">
             <img src="images/fotos/Home/Botones/de_interes.png" alt="De interés">

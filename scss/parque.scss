@@ -1,0 +1,164 @@
+.sedes-spaces-background {
+  background-image: url("../images/fotos/Planetas_Sedes/piso.png");
+  background-repeat: repeat-y;
+  background-size: 100% 100%;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.nave-container {
+  position: relative;
+  z-index: 2;
+  top: -10rem;
+  left: 0;
+  width: 100%;
+  height: 55rem;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    position: relative;
+    z-index: 2;
+  }
+  .sede-container {
+    position: absolute;
+    top: 48.5%;
+    left: 21.5%;
+    width: 14rem;
+    height: 4rem;
+    z-index: 3;
+    .park-site {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      /* background-color: rgb(0, 0, 0); */
+    }
+  }
+}
+
+.ubication {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .ubication-map {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .map-container {
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+.view-container {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column; /* Asegura alineación horizontal */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  gap: 2rem; /* Espacio entre imágenes */
+  .galeria-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 2rem;
+  }
+  .galeria-item {
+    width: 30rem;
+    height: 22rem;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 247, 255, 0.514);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill; /* Mantiene la proporción de la imagen */
+      object-position: center;
+    }
+  }
+  .park-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.info-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  /* background-color: rgba(24, 158, 151, 0.404); */
+  .lines {
+    width: 100%;
+    height: 10rem;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+  }
+}
+
+.hablemos-content {
+  width: 100%;
+  height: 40rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* background-color: rgba(158, 24, 24, 0.404); */
+  /* justify-content: space-between; */
+  top: -8rem;
+  .dominick-container {
+    width: 40%;
+    height: 80rem;
+    margin-left: 2rem;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .hablemos-button {
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* background-color: rgba(63, 177, 78, 0.404); */
+    margin-left: 2rem;
+    img {
+      width: 20rem;
+      height: 5rem;
+
+      object-fit: fill;
+    }
+    span {
+      font-size: 3.8rem;
+    }
+    p {
+      color: #ffffff;
+      text-shadow: 0 0 5px #00eeffd3, 0 0 10px #00eeffd3, 0 0 15px #00eeffd3;
+      text-align: center;
+      font-size: 3em;
+      font-weight: bold;
+      margin: 2rem 2rem;
+    }
+  }
+  .hablemos-button img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+}

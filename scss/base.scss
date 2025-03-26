@@ -20,6 +20,7 @@ body {
   object-fit: contain;
   position: relative;
   z-index: 10;
+
   a {
     position: relative;
     top: 1.5rem;
@@ -46,6 +47,7 @@ body {
   cursor: pointer;
   position: relative;
   z-index: 10;
+
   i {
     color: #ffffff;
     font-size: 3rem;
@@ -63,6 +65,7 @@ body {
   z-index: 15;
   transition: 0.3s ease;
   padding-top: 60px;
+
   ul {
     list-style: none;
     padding: 0;
@@ -79,6 +82,11 @@ body {
     text-decoration: none;
     font-size: 1.2rem;
     display: block;
+
+    &:hover {
+      color: #00ffff;
+
+    }
   }
 }
 
@@ -86,15 +94,12 @@ body {
   right: 0;
 }
 
-.sidebar-menu a:hover {
-  color: #00ffff;
-}
-
 .close-btn {
   position: absolute;
   top: 20px;
   right: 25px;
   cursor: pointer;
+
   i {
     color: #ffffff;
     font-size: 2rem;
@@ -130,41 +135,49 @@ body {
   gap: 18rem;
   padding-top: 1rem;
   bottom: 0;
+  position: relative;
 
   /* Columnas del footer */
   section {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    img {
+      width: 80%;
+      height: 7vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin: 0.9rem 0;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        color: #00ffff;
+
+      }
+    }
   }
 
-  img {
-    width: 80%;
-    height: 7vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  li {
-    margin: 0.9rem 0;
-  }
-
-  a {
-    color: #fff;
-    text-decoration: none;
-  }
 
   /* Redes sociales */
   .redes-sociales {
     display: flex;
     justify-content: center;
+
     a {
       width: 5rem;
       height: 5rem;
@@ -172,13 +185,15 @@ body {
       border-radius: 50%;
       display: flex;
       justify-content: center;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
-  .redes-sociales a:hover {
-    transform: scale(1.1);
-    transition: all 0.5s ease-in-out;
-  }
 }
+
 /* Estilos whatsapp y dominik icon*/
 
 .enlaces-derecha {
@@ -190,17 +205,19 @@ body {
   bottom: 15%;
   right: 0.125rem;
   z-index: 5;
-  transition: transform 0.3s ease;
-  img {
+
+
+  a img {
     margin-top: 0.625rem;
     width: 6rem;
     height: 6rem;
     filter: drop-shadow(0 0 10px rgb(93, 189, 204));
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+
+    }
+
   }
-}
-.whatsapp:hover {
-  transform: scale(1.1);
-}
-.dominik-icon:hover {
-  transform: scale(1.1);
 }

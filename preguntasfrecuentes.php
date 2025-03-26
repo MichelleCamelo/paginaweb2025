@@ -16,7 +16,7 @@ define('SITE_NAME', 'Star Park');
     <title><?php echo SITE_NAME; ?></title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script defer src="hamburgMenu.js"></script>
+    <script defer src="js/hamburgMenu.js"></script>
 </head>
 
 <body>

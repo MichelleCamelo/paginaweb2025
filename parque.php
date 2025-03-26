@@ -10,12 +10,6 @@ $parques = [
     'hayuelos' => [
         'nombre' => 'HAYUELOS',
         'park_info' => 'images/fotos/Planetas_Sedes/Hayuelos/imagenes/info.png',
-        // 'direccion' => 'Calle 20 #82-52',
-        // 'horario' => [
-        //     'Lunes a Viernes: 10AM - 8PM',
-        //     'Sábados: 10AM - 9PM',
-        //     'Domingos y Festivos: 11AM - 7PM'
-        // ],  // Aquí estaba el error, faltaba la coma
         'telefono' => '(+57) 3202325689',
         'park-site' => 'images/fotos/Planetas_Sedes/Hayuelos/imagenes/Hayuelos.png',
         'galeria' => [
@@ -27,12 +21,6 @@ $parques = [
     'altavista' => [
         'nombre' => 'ALTAVISTA',
         'park_info' => 'images/fotos/Planetas_Sedes/Altavista/imagenes/info.png',
-        // 'direccion' => 'Cra 1 #65D 58 Sur, Bogotá',
-        // 'horario' => [
-        //     'Lunes a Viernes: 01AM - 07PM',
-        //     'Sábados: 12AM - 08PM',
-        //     'Domingos y Festivos: 11AM - 08PM'
-        // ],
         'telefono' => '(+57) 3202325661',
         'park-site' => 'images/fotos/Planetas_Sedes/Altavista/imagenes/altavista.png',
         'galeria' => [
@@ -44,11 +32,6 @@ $parques = [
     'boulevarniza' => [
         'nombre' => 'BULEVAR',
         'park_info' => 'images/fotos/Planetas_Sedes/BulevarNiza/imagenes/info.png',
-        // 'direccion' => 'Ak. 58 #127-59, Bogotá',
-        // 'horario' => [
-        //     'Lunes a Viernes: 12PM - 07PM',
-        //     'Sábados,Domingos y Festivos: 12PM - 08PM'
-        // ],
         'telefono' => '(+57) 3208587729',
         'park-site' => 'images/fotos/Planetas_Sedes/BulevarNiza/imagenes/bulevar.png',
         'galeria' => [
@@ -60,11 +43,6 @@ $parques = [
     'paseovillaDelrio' => [
         'nombre' => 'PASEO VILLA DEL RIO',
         'park_info' => 'images/fotos/Planetas_Sedes/PaseoVillaRio/imagenes/info.png',
-        // 'direccion' => 'Dg. 57c Sur #62-60, Bogotá',
-        // 'horario' => [
-        //     'Lunes a Viernes: 01PM - 08PM',
-        //     'Sábados,Domingos y Festivos: 11PM - 09PM'
-        // ],
         'telefono' => '(+57) 3102326520',
         'park-site' => 'images/fotos/Planetas_Sedes/PaseoVillaRio/imagenes/paseoV_Rio.png',
         'galeria' => [
@@ -77,12 +55,6 @@ $parques = [
     'mosquera' => [
         'nombre' => 'MOSQUERA',
         'park_info' => 'images/fotos/Planetas_Sedes/Mosquera/imagenes/info.png',
-        // 'direccion' => 'Cra. 3 #No. 15 A - 57, Mosquera, Cundinamarca',
-        // 'horario' => [
-        //     'Lunes a Viernes: 01AM - 08PM',
-        //     'Sábados: 12:30PM - 08PM',
-        //     'Domingos y Festivos: 11AM - 08PM'
-        // ],
         'telefono' => '(+57) 3112470566',
         'park-site' => 'images/fotos/Planetas_Sedes/Mosquera/imagenes/Mosquera.png',
         'galeria' => [
@@ -94,11 +66,6 @@ $parques = [
     'neiva' => [
         'nombre' => 'NEIVA',
         'park_info' => 'images/fotos/Planetas_Sedes/Neiva/imagenes/info.png',
-        // 'direccion' => 'Cra. 8a #38-42, Comuna 2, Neiva, Huila',
-        // 'horario' => [
-        //     'Lunes a Viernes: 01PM - 09PM',
-        //     'Sábados,Domingos y Festivos: 11PM - 09PM'
-        // ],
         'telefono' => '(+57) 3118080091',
         'park-site' => 'images/fotos/Planetas_Sedes/Neiva/imagenes/Neiva.png',
         'galeria' => [
@@ -110,12 +77,6 @@ $parques = [
     'bello' => [
         'nombre' => 'BELLO',
         'park_info' => 'images/fotos/Planetas_Sedes/bello/imagenes/info.png',
-        // 'direccion' => 'Autopista Nte. #34-67, Hermosa Provincia, Bello, Antioquia',
-        // 'horario' => [
-        //     'Lunes a Viernes: 12PM - 08PM',
-        //     'Sábados: 12PM - 08:30PM',
-        //     'Domingos y Festivos: 11AM - 09PM'
-        // ],
         'telefono' => '(+57) 3118080092',
         'park-site' => 'images/fotos/Planetas_Sedes/bello/imagenes/Bello.png',
         'galeria' => [
@@ -127,12 +88,6 @@ $parques = [
     'mayorca' => [
         'nombre' => 'MAYORCA',
         'park_info' => 'images/fotos/Planetas_Sedes/Mayorca/Imagenes/info.png',
-        // 'direccion' => 'Mayorca Mega Plaza, Cl. 51 Sur #48-57, Sabaneta',
-        // 'horario' => [
-        //     'Lunes a Viernes: 12:30PM - 08PM',
-        //     'Sábados: 12PM - 09PM',
-        //     'Domingos y Festivos: 12AM - 08:30PM'
-        // ],
         'telefono' => '(+57) 3145442606',
         'park-site' => 'images/fotos/Planetas_Sedes/Mayorca/Imagenes/Mayorca.png',
         'galeria' => [
@@ -144,11 +99,6 @@ $parques = [
     'cali' => [
         'nombre' => 'CALI',
         'park_info' => 'images/fotos/Planetas_Sedes/Cali/imagenes/info.png',
-        // 'direccion' => 'Cl. 5 #50 - 103, panamericano, Cali, Valle del Cauca',
-        // 'horario' => [
-        //     'Lunes a Viernes: 01PM - 08PM',
-        //     'Sábados,Domingos y Festivos: 12PM - 09PM'
-        // ],
         'telefono' => '(+57) 3118080084',
         'park-site' => 'images/fotos/Planetas_Sedes/Cali/imagenes/cali.png',
         'galeria' => [
@@ -173,9 +123,8 @@ $parque = $parques[$parque_id];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/parque.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="css/styles.css?v=<?php echo time(); ?>">
-    <script defer src="hamburgMenu.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/hamburgMenu.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title><?php echo SITE_NAME; ?></title>
 </head>

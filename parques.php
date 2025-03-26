@@ -9,13 +9,14 @@ require_once 'includes/config.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <script defer src="hamburgMenu.js"></script>
+    <script defer src="js/hamburgMenu.js"></script>
     <title>Parques</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
     <main class="space-background">
+        <!-- Navegador y menú plegable -->
         <nav class="navigation-container">
             <a href="index.php">
                 <img src="images/fotos/Parques/botones/starpark.png" alt="LogoStarPark">
@@ -37,16 +38,14 @@ require_once 'includes/config.php';
             </ul>
         </section>
         <!-- no borrar, parte del hamburguer-menu -->
-        <div class="overlay"></div> 
-        <!-- Reemplaza la sección de planetas en parques.php -->
-
+        <div class="overlay"></div>
+        <!-- Seccion planetas -->
         <div class="cc-parques">
             <article class="starpark-locations location-section">
                 <!-- Bogotá Central -->
                 <section class="location-central">
                     <img src="images\fotos\Parques\imagenes\bogotá.png" alt="SedesEnBogotá">
                 </section>
-
                 <!-- Primera fila de planetas - Bogotá -->
                 <section class="planets-row">
                     <div class="planet-item planet-purple">
@@ -82,10 +81,10 @@ require_once 'includes/config.php';
 
             <!-- Resto del país -->
             <article class="resto-pais location-section">
+                <!-- Resto de países title -->
                 <section class="location-central">
                     <img src="images\fotos\Parques\imagenes\resto_del_país.png" alt="RestoDelPaís">
                 </section>
-
                 <!-- Segunda fila de planetas - Resto del país -->
                 <section class="planets-row">
                     <div class="planet-item planet-green">

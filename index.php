@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo SITE_NAME; ?></title>
     <link rel="stylesheet" href="css/styles.css">
-    <script defer src="carousel.js"></script>
+    <script defer src="js/carousel.js"></script>
     <meta name="theme-color" content="#314c9c">
 </head>
 

@@ -1,194 +1,120 @@
-<?php
-require_once 'includes/header.php';
-?>
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="space-background">
-    <div class="main-container">
-        <!-- Logo y navegación -->
-        <div class="logo-container">
-            <img src="images/logohori.png" alt="Star Park" class="main-logo">
-            <nav class="main-nav">
-                <a href="inicio.php">INICIO</a>
-                <a href="parques.php">PARQUES</a>
-                <a href="servicios.php">SERVICIOS</a>
-                <a href="contacto.php">CONTACTO</a>
-            </nav>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/hamburgMenu.js"></script>
+    <title>Servicio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
 
-        <!-- Contenido principal -->
-        <div class="service-content">
-            <div class="service-header">
-                <h1>QUEREMOS CONOCER TU OPINIÓN</h1>
-                <p>DILIGENCIA EL FORMULARIO Y TE RESPONDEREMOS LO ANTES POSIBLE</p>
+<body>
+    <div class="servicio-space-background">
+        <nav class="navigation-container">
+            <a href="index.php">
+                <img src="images/fotos/Parques/botones/starpark.png" alt="LogoStarPark">
+            </a>
+            <div class="hamburger-menu">
+                <i class="fa-sharp fa-solid fa-bars"></i>
             </div>
+        </nav>
 
-            <div class="form-container">
-                <form action="procesar_servicio.php" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="nombre" id="nombre" required>
-                        <label for="nombre">Nombre</label>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="email" name="email" id="email" required>
-                        <label for="email">Email</label>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="tel" name="telefono" id="telefono" required>
-                        <label for="telefono">Número telefónico</label>
-                    </div>
-
-                    <div class="form-group">
-                        <select name="sede" id="sede" required>
-                            <option value="" disabled selected>Selecciona una sede</option>
-                            <option value="Hayuelos">Hayuelos</option>
-                            <option value="Bulevar">Bulevar</option>
-                            <!-- Agregar más sedes -->
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <textarea name="descripcion" id="descripcion" required></textarea>
-                        <label for="descripcion">Describe los hechos que te motivaron</label>
-                    </div>
-
-                    <button type="submit">ENVIAR</button>
-                </form>
+        <section class="sidebar-menu">
+            <div class="close-btn">
+                <i class="fa-solid fa-xmark"></i>
             </div>
-        </div>
+            <ul>
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="parques.php">Parques</a></li>
+                <li><a href="servicios.php">Servicios</a></li>
+                <li><a href="contacto.php">Contacto</a></li>
+            </ul>
+        </section>
+        <!-- no borrar, parte del hamburguer-menu -->
+        <div class="overlay"></div>
+        <!-- contenedor principal con la imagen y formulario -->
+        <main class="main-container-servicio">
+            <section class="servicio-left">
+                <img src="images/fotos/servicio_al_cliente/imagenes/informacion.png" alt="Información">
+            </section>
+
+            <section class="servicio-right">
+                <div class="form-container">
+                    <h2>Servicio al <br> cliente</h2>
+
+                    <form class="contactForm" action="procesar_formulario.php" method="post">
+                        <div class="form-group">
+                            <label for="nombre"><i class="fa-regular fa-user"></i></i></i></label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email"><i class="fa-solid fa-envelope"></i></label>
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono"><i class="fa-solid fa-phone"></i></label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="Número telefónico" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ubicacion"><i class="fa-solid fa-location-dot"></i></label>
+                            <select id="ubicacion" name="ubicacion" required>
+                                <option value="" disabled selected>Ubicación del parque</option>
+                                <option value="altavista">Altavista</option>
+                                <option value="bulevar_niza">Bulevar Niza</option>
+                                <option value="hayuelos">Hayuelos</option>
+                                <option value="paseo_villa_del_rio">Paseo Villa del Río</option>
+                                <option value="bello">Bello</option>
+                                <option value="cali">Cali</option>
+                                <option value="mayorca">Mayorca</option>
+                                <option value="mosquera">Mosquera</option>
+                                <option value="neiva">Neiva</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="descripcion"><i class="fa-solid fa-comment-dots"></i></label>
+                            <textarea id="descripcion" name="descripcion" placeholder="Descripción" rows="4" required></textarea>
+                        </div>
+
+                        <div class="form-submit">
+                            <button type="submit">ENVIAR</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
     </div>
-</div>
+    <!-- Footer -->
+    <footer class="de-interes">
+        <section class="enlaces">
+            <img src="images/fotos/Home/Botones/de_interes.png" alt="De interés">
+            <ul>
+                <li><a href="preguntasfrecuentes.php">Preguntas frecuentes</a></li>
+                <li><a href="nuestraempresa.php">Nuestra Empresa</a></li>
+                <li><a href="servicio.php">Servicio al cliente</a></li>
+                <li><a href="blog.php">Blog</a></li>
+            </ul>
+        </section>
+        <section class="redes">
+            <img src="images/fotos/Home/Botones/redes_sociales.png" alt="Redes sociales">
+            <div class="redes-sociales">
+                <a href="#"><img src="images/fotos/Home/Botones/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/fotos/Home/Botones/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="images/fotos/Home/Botones/tiktok.png" alt="TikTok"></a>
+            </div>
+        </section>
+        <section class="normatividad">
+            <img src="images/fotos/Home/Botones/normatividad.png" alt="Normatividad">
+            <ul>
+                <li><a href="politica.php">Política tratamiento de datos</a></li>
+            </ul>
+        </section>
+    </footer>
+</body>
 
-<style>
-.space-background {
-    background: linear-gradient(180deg, #010b1a 0%, #041530 100%);
-    min-height: 100vh;
-    padding: 40px;
-}
-
-.main-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.logo-container {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.main-logo {
-    max-width: 300px;
-    margin-bottom: 20px;
-}
-
-.main-nav {
-    background: rgba(0, 247, 255, 0.1);
-    padding: 15px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-}
-
-.main-nav a {
-    color: #00f7ff;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: all 0.3s ease;
-}
-
-.main-nav a:hover {
-    color: white;
-    text-shadow: 0 0 10px #00f7ff;
-}
-
-.service-content {
-    background: rgba(0, 20, 40, 0.8);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 0 30px rgba(0, 247, 255, 0.1);
-}
-
-.service-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.service-header h1 {
-    color: #00f7ff;
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.form-container {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.form-group {
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 12px;
-    background: rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(0, 247, 255, 0.2);
-    border-radius: 8px;
-    color: white;
-    font-size: 1em;
-}
-
-.form-group textarea {
-    height: 150px;
-    resize: vertical;
-}
-
-.form-group label {
-    position: absolute;
-    left: 12px;
-    top: 12px;
-    color: rgba(255, 255, 255, 0.6);
-    transition: all 0.3s ease;
-    pointer-events: none;
-}
-
-button {
-    width: 100%;
-    padding: 15px;
-    background: transparent;
-    border: 2px solid #00f7ff;
-    color: #00f7ff;
-    font-size: 1.2em;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-button:hover {
-    background: rgba(0, 247, 255, 0.1);
-    box-shadow: 0 0 20px rgba(0, 247, 255, 0.2);
-}
-</style>
-
-<section class="de-interes">
-    <h2>De Interés</h2>
-    <ul>
-        <li>
-            <a href="preguntasfrecuentes.php">Preguntas Frecuentes</a>
-        </li>
-        <li>
-            <a href="nuestraempresa.php">Nuestra Empresa</a>
-        </li>
-        <li>
-            <a href="servicio.php">Servicio al Cliente</a>
-        </li>
-        <li>
-            <a href="blog.php">Blog</a>
-        </li>
-    </ul>
-</section>
+</html>

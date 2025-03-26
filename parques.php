@@ -10,7 +10,7 @@ require_once 'includes/config.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <script defer src="hamburgMenu.js"></script>
-    <title><?php echo SITE_NAME; ?></title>
+    <title>Parques</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
@@ -25,7 +25,7 @@ require_once 'includes/config.php';
             </div>
         </nav>
 
-        <div class="sidebar-menu">
+        <section class="sidebar-menu">
             <div class="close-btn">
                 <i class="fa-solid fa-xmark"></i>
             </div>
@@ -35,99 +35,97 @@ require_once 'includes/config.php';
                 <li><a href="servicios.php">Servicios</a></li>
                 <li><a href="contacto.php">Contacto</a></li>
             </ul>
-        </div>
-        <div class="overlay"></div>
-        <article class="starpark-locations location-section">
-            <!-- Bogotá Central -->
-            <section class="location-central">
-                <img src="images\fotos\Parques\imagenes\bogotá.png" alt="SedesEnBogotá">
-            </section>
+        </section>
+        <!-- no borrar, parte del hamburguer-menu -->
+        <div class="overlay"></div> 
+        <!-- Reemplaza la sección de planetas en parques.php -->
 
-            <!-- Primera fila de planetas -->
-            <section class="planets-row">
-                <div class="planet-item planet-purple">
-                    <a href="parque.php?id=altavista">
-                        <div class="planet-content">
-                            <img src="images/fotos/Parques/botones/altavista.png" alt="Altavista">
-                            <!-- <span>ALTAVISTA</span> -->
-                        </div>
-                    </a>
-                </div>
-                <div class="planet-item planet-yellow">
-                    <a href="parque.php?id=boulevarniza">
-                        <div class="planet-content">
-                            <img src="images/fotos/Parques/botones/bulevar_niza.png" alt="Bulevar Niza">
-                            <!-- <span>BULEVAR NIZA</span> -->
-                        </div>
-                    </a>
-                </div>
-                <div class="planet-item planet-orange">
-                    <a href="parque.php?id=hayuelos">
-                        <div class="planet-content">
-                            <img src="images/fotos/Parques/botones/hayuelos.png" alt="Hayuelos">
-                            <!-- <span>HAYUELOS</span> -->
-                        </div>
-                    </a>
-                </div>
-                <div class="planet-item planet-pink">
-                    <a href="parque.php?id=paseovillaDelrio">
-                        <div class="planet-content">
-                            <img src="images/fotos/Parques/botones/paseo_villa_del_rio.png" alt="Paseo Villa del Río">
-                            <!-- <span>PASEO VILLA DEL RÍO</span> -->
-                        </div>
-                    </a>
-                </div>
-            </section>
-        </article>
-        <!-- Resto del país -->
-        <article class="resto-pais location-section">
-            <section class="location-central">
-                <img src="images\fotos\Parques\imagenes\resto_del_país.png" alt="RestoDelPaís">
-            </section>
-            <!-- Segunda fila de planetas -->
-            <section class="planets-row">
-                <div class="planet-item planet-green">
-                    <a href="parque.php?id=bello">
-                        <div class="planet-content">
-                            <img src="images/fotos/Parques/botones/bello.png" alt="Bello">
-                            <!-- <span>BELLO</span> -->
-                        </div>
-                    </a>
-                </div>
-                <div class="planet-item2 planet-saturn">
-                    <a href="parque.php?id=cali">
-                        <div class="planet-content">
-                            <img src="images/fotos/Parques/botones/cali.png" alt="Cali">
-                            <!-- <span>CALI</span> -->
-                        </div>
-                    </a>
-                </div>
-                <div class="planet-item planet-earth">
-                    <a href="parque.php?id=mayorca">
-                        <div class="planet-content">
-                            <img src="images/fotos/Parques/botones/mayorca.png" alt="Mayorca">
-                            <!-- <span>MAYORCA</span> -->
-                        </div>
-                    </a>
-                </div>
-                <div class="planet-item2 planet-blue">
-                    <a href="parque.php?id=mosquera">
-                        <div class="planet-content">
-                            <img src="images/fotos/Parques/botones/mosquera.png" alt="Mosquera">
-                            <!-- <span>MOSQUERA</span> -->
-                        </div>
-                    </a>
-                </div>
-                <div class="planet-item planet-red">
-                    <a href="parque.php?id=neiva">
-                        <div class="planet-content">
-                            <img src="images/fotos/Parques/botones/neiva.png" alt="Neiva">
-                            <!-- <span>NEIVA</span> -->
-                        </div>
-                    </a>
-                </div>
-            </section>
-        </article>
+        <div class="cc-parques">
+            <article class="starpark-locations location-section">
+                <!-- Bogotá Central -->
+                <section class="location-central">
+                    <img src="images\fotos\Parques\imagenes\bogotá.png" alt="SedesEnBogotá">
+                </section>
+
+                <!-- Primera fila de planetas - Bogotá -->
+                <section class="planets-row">
+                    <div class="planet-item planet-purple">
+                        <a href="parque.php?id=altavista">
+                            <div class="planet-content">
+                                <img src="images/fotos/Parques/botones/altavista.png" alt="Altavista">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="planet-item planet-yellow">
+                        <a href="parque.php?id=boulevarniza">
+                            <div class="planet-content">
+                                <img src="images/fotos/Parques/botones/bulevar_niza.png" alt="Bulevar Niza">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="planet-item planet-orange">
+                        <a href="parque.php?id=hayuelos">
+                            <div class="planet-content">
+                                <img src="images/fotos/Parques/botones/hayuelos.png" alt="Hayuelos">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="planet-item planet-pink">
+                        <a href="parque.php?id=paseovillaDelrio">
+                            <div class="planet-content">
+                                <img src="images/fotos/Parques/botones/paseo_villa_del_rio.png" alt="Paseo Villa del Río">
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </article>
+
+            <!-- Resto del país -->
+            <article class="resto-pais location-section">
+                <section class="location-central">
+                    <img src="images\fotos\Parques\imagenes\resto_del_país.png" alt="RestoDelPaís">
+                </section>
+
+                <!-- Segunda fila de planetas - Resto del país -->
+                <section class="planets-row">
+                    <div class="planet-item planet-green">
+                        <a href="parque.php?id=bello">
+                            <div class="planet-content">
+                                <img src="images/fotos/Parques/botones/bello.png" alt="Bello">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="planet-item2 planet-saturn">
+                        <a href="parque.php?id=cali">
+                            <div class="planet-content">
+                                <img src="images/fotos/Parques/botones/cali.png" alt="Cali">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="planet-item planet-earth">
+                        <a href="parque.php?id=mayorca">
+                            <div class="planet-content">
+                                <img src="images/fotos/Parques/botones/mayorca.png" alt="Mayorca">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="planet-item2 planet-blue">
+                        <a href="parque.php?id=mosquera">
+                            <div class="planet-content">
+                                <img src="images/fotos/Parques/botones/mosquera.png" alt="Mosquera">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="planet-item planet-red">
+                        <a href="parque.php?id=neiva">
+                            <div class="planet-content">
+                                <img src="images/fotos/Parques/botones/neiva.png" alt="Neiva">
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </article>
+        </div>
     </main>
     <!-- Botones de whatsapp y dominick, lado derecho -->
     <aside class="enlaces-derecha">

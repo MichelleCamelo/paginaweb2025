@@ -1,13 +1,32 @@
 /* Background principal */
 .space-background {
   width: 100%;
-  height: 110rem;
+  min-height: 100vh;
+  /* Cambiado de height a min-height */
   background-image: url("../images/fotos/Parques/imagenes/fondo.png");
-  background-size: 100% 100%;
+  background-size: cover;
+  /* Cambiado para mejor ajuste */
   background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  /* Asegura que los elementos fluyan verticalmente */
+  position: relative;
+  /* Para posicionamiento adecuado */
 }
+
 /* Seccion de los parques */
+.cc-parques {
+  width: 100%;
+  min-height: 100vh;
+  /* Cambiado de height fija a min-height */
+  display: flex;
+  flex-direction: column;
+  /* Asegura flujo vertical */
+  padding-bottom: 5rem;
+  /* Espacio para el footer */
+}
+
 .location-section {
   position: relative;
   z-index: 2;
@@ -16,46 +35,64 @@
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
-  .location-central {
-    width: 20rem;
-    height: 18rem;
-    text-align: center;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      border-radius: 10%;
-    }
+}
+
+.location-section .location-central {
+  width: 20rem;
+  height: 18rem;
+  text-align: center;
+  margin-bottom: 2rem;
+
+  /* Espacio entre el título y los planetas */
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10%;
   }
 }
+
+
 .resto-pais {
-  margin-top: 5rem;
+  margin-top: 2rem;
+  /* Reducido para mejor espaciado */
+  padding-top: 3rem;
+  /* Añadido espacio superior */
 }
+
 /* Configuracion de los planetas */
 .planets-row {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  /* Permite que los planetas se ajusten en pantallas pequeñas */
   gap: 2rem;
-  .planet-item {
-    position: relative;
-    width: 16rem;
-    height: 16rem;
-    transition: transform 0.3s ease;
-  }
-  .planet-item2 {
-    position: relative;
-    top: 15rem;
-    width: 16rem;
-    height: 16rem;
-    transition: transform 0.3s ease;
-  }
+  margin-bottom: 3rem;
+  /* Espacio después de cada fila */
 }
-.planet-item:hover {
-  transform: scale(1.1);
+
+.planet-item,
+.planet-item2 {
+  position: relative;
+  width: 12rem;
+  /* Reducido ligeramente para mejor ajuste */
+  height: 12rem;
+  transition: transform 0.3s ease;
 }
+
+/* Eliminar el posicionamiento absoluto que causaba problemas */
+.planet-item2 {
+  position: relative;
+  top: 15rem;
+  padding-bottom: 15rem;
+  /* Eliminado el top: 15rem que causaba problemas */
+}
+
+.planet-item:hover,
 .planet-item2:hover {
   transform: scale(1.1);
 }
+
 .planet-content {
   position: relative;
   width: 100%;
@@ -64,13 +101,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
 }
 
+.planet-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Efectos de brillo para los planetas - mantenidos igual */
 .planet-orange {
   filter: drop-shadow(0 0 20px rgba(255, 140, 0, 0.6));
 }
@@ -107,39 +146,48 @@
   filter: drop-shadow(0 0 20px rgba(218, 165, 32, 0.6));
 }
 
-.planet-central h2 {
-  color: #00f7ff;
-  font-size: 2.5em;
-  text-transform: uppercase;
-  text-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
-  background: rgba(0, 0, 0, 0.3);
-  padding: 20px 40px;
-  border-radius: 10px;
-  display: inline-block;
+/* Footer - ajustado para que siempre esté abajo */
+.de-interes {
+  width: 100%;
+  padding: 2rem 0;
+  /* Cambiado de height fija a padding */
+  background-image: url("../images/fotos/Home/imagenes/final_de_la_nave.png");
+  background-color: #410645;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+  /* Reducido para pantallas más pequeñas */
+  position: relative;
+  /* Cambiado de absolute a relative */
+  bottom: 0;
 }
 
-@keyframes twinkle {
-  from {
-    background-position: 0 0, 40px 60px, 130px 270px;
-  }
-
-  to {
-    background-position: -550px 0, -350px 60px, -250px 270px;
+@media (max-width: 1200px) {
+  .de-interes {
+    gap: 5rem;
+    /* Ajuste para pantallas medianas */
+    flex-wrap: wrap;
+    /* Permite que los elementos se ajusten */
   }
 }
 
 @media (max-width: 768px) {
   .planets-row {
-    gap: 20px;
+    gap: 1rem;
   }
 
-  .planet-item {
-    width: 150px;
-    height: 150px;
+  .planet-item,
+  .planet-item2 {
+    width: 8rem;
+    height: 8rem;
   }
 
-  .planet-central h2 {
-    font-size: 1.8em;
-    padding: 15px 30px;
+  .de-interes {
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
   }
 }

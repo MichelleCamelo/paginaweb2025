@@ -1,4 +1,4 @@
-.space-background {
+.politica-space-background {
   background-image: url("../images/fotos/tratamiento_de_datos/imagenes/fondo.png");
   background-size: cover;
   background-position: center;
@@ -12,11 +12,13 @@
   height: auto;
   margin: 1rem 4rem 0 4rem;
   border-radius: 2rem;
+
   .privacy-header {
     width: 100%;
     height: 25rem;
     text-align: center;
     margin-bottom: 2rem;
+
     img {
       width: 40rem;
       height: 25rem;
@@ -24,6 +26,7 @@
       border-radius: 2rem;
     }
   }
+
   .privacy-content {
     width: 100%;
     height: auto;
@@ -33,31 +36,37 @@
 }
 
 .policy-section {
-  background: rgba(75, 70, 70, 0.2);
+  background: rgba(104, 112, 151, 0.192);
   padding: 2rem 8rem 2rem 8rem;
-  border-radius: 5rem;
-  h2 {
+  border-radius: 3rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-0.3125rem);
+  }
+
+  h2,
+  h3,
+  h4 {
     color: #00f7ff;
     font-size: 1.3em;
     margin-bottom: 1.25rem;
   }
-  h3,
-  h4 {
-    color: #00f7ff;
-    font-size: 1.1em;
-    margin: 1rem 0;
-  }
+
   p {
     color: white;
     line-height: 1.6;
     font-size: 1.2rem;
     margin-bottom: 1rem;
   }
+
   ul {
     list-style: none;
     padding-left: 1.25rem;
     margin-bottom: 1.25rem;
   }
+
   li {
     color: white;
     font-size: 1.2rem;
@@ -69,14 +78,15 @@
 .subsection {
   margin-left: 1.25rem;
   margin-bottom: 1.25rem;
+
+  .policy-item {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+  }
 }
 
-.policy-item {
-  background: rgba(0, 0, 0, 0.2);
-  padding: 1rem;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
-}
 
 .contact-info {
   background: rgba(0, 0, 0, 0.2);

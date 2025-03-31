@@ -7,7 +7,7 @@ $use_carousel = true;
 include_once '../includes/head.php';
 ?>
 
-<section class="video-container">
+<section class="inicio-video-container">
     <video autoplay loop muted playsinline controls alt="videoPrincipal">
         <source src="../images/videoprincipal.mp4" type="video/mp4">
     </video>

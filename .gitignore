@@ -22,3 +22,10 @@ yarn-error.log*
 # Archivos del sistema operativo
 .DS_Store
 Thumbs.db
+
+# BFG artifacts
+*.bfg-report/
+deleted-files.txt
+object-id-map-old-new.txt
+cache-stats.txt
+bfg-*.jar

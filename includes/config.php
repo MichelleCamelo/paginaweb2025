@@ -1,7 +1,7 @@
 <?php
 // Configuraciones generales del sitio
-define('SITE_NAME', 'Star Park');
-define('SITE_URL', 'http://localhost/starpark/');
+define('SITE_NAME', 'StarPark');
+define('SITE_URL', 'http://localhost/paginaweb2025/');
 
 // Rutas del sitio
 define('ROOT_PATH', dirname(__DIR__) . '/');
@@ -13,3 +13,4 @@ define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_NAME', 'starpark');
+?>

@@ -7,7 +7,6 @@
   background-image: url("../images/fotos/Home/imagenes/centro_de_control.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  object-fit: cover;
   object-position: center;
 
   /* Estilos del logo centrado */
@@ -22,7 +21,7 @@
       width: 40vw;
       height: 14vh;
       position: relative;
-      left: -1.6%;
+      // left: -1.6%;
     }
   }
 }

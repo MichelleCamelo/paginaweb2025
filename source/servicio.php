@@ -15,29 +15,32 @@ include_once '../includes/head.php';
         </section>
 
         <section class="servicio-right">
-            <div class="form-container">
+            <div class="service-form-container">
                 <h2>Servicio al <br> cliente</h2>
 
-                <form class="contactForm" action="procesar_formulario.php" method="post">
-                    <div class="form-group">
-                        <label for="nombre"><i class="fa-regular fa-user"></i></i></i></label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                <form class="serviceForm" action="procesar_formulario.php" method="post">
+                    <div class="service-form-group">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <label for="nombre">Nombre</label>
                     </div>
 
-                    <div class="form-group">
-                        <label for="email"><i class="fa-solid fa-envelope"></i></label>
-                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    <div class="service-form-group">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email</label>
                     </div>
 
-                    <div class="form-group">
-                        <label for="telefono"><i class="fa-solid fa-phone"></i></label>
-                        <input type="tel" id="telefono" name="telefono" placeholder="Número telefónico" required>
+                    <div class="service-form-group">
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="tel" id="telefono" name="telefono" required>
+                        <label for="telefono">Número telefónico</label>
                     </div>
 
-                    <div class="form-group">
-                        <label for="ubicacion"><i class="fa-solid fa-location-dot"></i></label>
+                    <div class="service-form-group">
+                        <i class="fa-solid fa-location-dot"></i>
                         <select id="ubicacion" name="ubicacion" required>
-                            <option value="" disabled selected>Ubicación del parque</option>
+                            <option value="" disabled selected>Seleccionar una opción</option>
                             <option value="altavista">Altavista</option>
                             <option value="bulevar_niza">Bulevar Niza</option>
                             <option value="hayuelos">Hayuelos</option>
@@ -48,15 +51,18 @@ include_once '../includes/head.php';
                             <option value="mosquera">Mosquera</option>
                             <option value="neiva">Neiva</option>
                         </select>
+                        <label for="ubicacion">Ubicación del parque</label>
+
                     </div>
 
-                    <div class="form-group">
-                        <label for="descripcion"><i class="fa-solid fa-comment-dots"></i></label>
-                        <textarea id="descripcion" name="descripcion" placeholder="Descripción" rows="4" required></textarea>
+                    <div class="service-form-group">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+                        <label for="descripcion">Descripción</label>
                     </div>
 
-                    <div class="form-submit">
-                        <button type="submit">ENVIAR</button>
+                    <div class="service-form-submit">
+                        <button type="submit">Enviar</button>
                     </div>
                 </form>
             </div>

@@ -98,188 +98,237 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-// img novedades
-.title-novedades {
-  width: 100%;
-  height: 10rem;
-  position: absolute;
-  top: 20rem;
-  width: 100%;
-  z-index: 4;
-  background-position: center;
-  background-repeat: no-repeat;
-  object-fit: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  img {
+  // img novedades
+  .title-novedades {
     width: 100%;
-    height: 100%;
-  }
-}
-// todo el contenido de carousel
-.carousel {
-  top: 20rem;
-  width: 90vw;
-  /*Se puede ajustar el tamaño del container para las tarjetas*/
-  height: 48rem;
-  position: relative;
-  perspective: 62.5rem;
-  background-color: #5f77b8;
-
-  border-radius: 1.25rem;
-  overflow: hidden;
-
-  .carousel-items {
+    height: 10rem;
+    position: absolute;
+    top: 20rem;
     width: 100%;
-    height: 42rem;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.6s ease-out;
-  }
-
-  .carousel-item {
-    position: absolute;
-    width: 23rem;
-    height: 90%;
-    top: 5%;
-    bottom: 5%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 10px 1.875rem rgba(96, 122, 118, 0.5);
-    opacity: 0;
-    overflow: hidden;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-    transform: scale(0.8) translateY(0) translateZ(-400px);
-    z-index: 0;
-    object-fit: contain;
-
-    .instagram-media {
-      width: 100%;
-      height: 100%;
-      border: none;
-      border-radius: 1rem;
-    }
-  }
-
-  .carousel-item.prev {
-    opacity: 0.7;
-    transform: scale(0.85) translateX(-80%) translateY(0) translateZ(-100px);
-    z-index: 2;
-  }
-
-  .carousel-item.active {
-    opacity: 1;
-    transform: scale(1) translateX(0) translateY(0) translateZ(0);
-    z-index: 5;
-    box-shadow: 0 15px 35px rgba(56, 236, 236, 0.863);
-  }
-
-  .carousel-item.next {
-    opacity: 0.7;
-    transform: scale(0.85) translateX(80%) translateY(0) translateZ(-100px);
-    z-index: 2;
-  }
-
-  .carousel-item.far-prev {
-    opacity: 0.3;
-    transform: scale(0.7) translateX(-150%) translateY(0) translateZ(-200px);
-    z-index: 1;
-  }
-
-  .carousel-item.far-next {
-    opacity: 0.3;
-    transform: scale(0.7) translateX(150%) translateY(0) translateZ(-200px);
-    z-index: 1;
-  }
-
-  .carousel-item.back {
-    opacity: 0.3;
-    transform: scale(0.6) translateY(10%) translateZ(-300px);
-    z-index: 0;
-  }
-
-  .carousel-controls {
-    position: absolute;
-    bottom: 2rem;
-    left: 0;
-    right: 0;
+    z-index: 4;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10rem;
-    z-index: 10;
 
-    .carousel-prev,
-    .carousel-next {
-      width: 50px;
-      height: 50px;
-      background: rgba(255, 255, 255, 0.8);
-      border: none;
-      border-radius: 50%;
-      font-size: 24px;
-      cursor: pointer;
-      box-shadow: 0 0.125rem 10px rgb(99, 181, 192);
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 
-      &:hover {
-        background: rgb(122, 228, 228);
-        transform: scale(1.1);
+  // todo el contenido de carousel
+  .carousel {
+    top: 20rem;
+    width: 90vw;
+    /*Se puede ajustar el tamaño del container para las tarjetas*/
+    height: 48rem;
+    position: relative;
+    perspective: 62.5rem;
+    background-color: #5f77b8;
 
+    border-radius: 1.25rem;
+    overflow: hidden;
+
+    .carousel-items {
+      width: 100%;
+      height: 42rem;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.6s ease-out;
+    }
+
+    .carousel-item {
+      position: absolute;
+      width: 23rem;
+      height: 90%;
+      top: 5%;
+      bottom: 5%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 10px 1.875rem rgba(96, 122, 118, 0.5);
+      opacity: 0;
+      overflow: hidden;
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+      transform: scale(0.8) translateY(0) translateZ(-400px);
+      z-index: 0;
+      object-fit: contain;
+
+      .instagram-media {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 1rem;
       }
     }
 
-    .carousel-indicators {
+    .carousel-item.prev {
+      opacity: 0.7;
+      transform: scale(0.85) translateX(-80%) translateY(0) translateZ(-100px);
+      z-index: 2;
+    }
+
+    .carousel-item.active {
+      opacity: 1;
+      transform: scale(1) translateX(0) translateY(0) translateZ(0);
+      z-index: 5;
+      box-shadow: 0 15px 35px rgba(56, 236, 236, 0.863);
+    }
+
+    .carousel-item.next {
+      opacity: 0.7;
+      transform: scale(0.85) translateX(80%) translateY(0) translateZ(-100px);
+      z-index: 2;
+    }
+
+    .carousel-item.far-prev {
+      opacity: 0.3;
+      transform: scale(0.7) translateX(-150%) translateY(0) translateZ(-200px);
+      z-index: 1;
+    }
+
+    .carousel-item.far-next {
+      opacity: 0.3;
+      transform: scale(0.7) translateX(150%) translateY(0) translateZ(-200px);
+      z-index: 1;
+    }
+
+    .carousel-item.back {
+      opacity: 0.3;
+      transform: scale(0.6) translateY(10%) translateZ(-300px);
+      z-index: 0;
+    }
+
+    .carousel-controls {
+      position: absolute;
+      bottom: 2rem;
+      left: 0;
+      right: 0;
       display: flex;
-      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      gap: 10rem;
+      z-index: 10;
 
-      .indicator {
-        width: 12px;
-        height: 12px;
-        background: rgb(149, 160, 160);
+      .carousel-prev,
+      .carousel-next {
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.8);
+        border: none;
         border-radius: 50%;
+        font-size: 24px;
         cursor: pointer;
-        transition: all 0.3s ease-in-out;
+        box-shadow: 0 0.125rem 10px rgb(99, 181, 192);
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+          background: rgb(122, 228, 228);
+          transform: scale(1.1);
+
+        }
       }
 
-      .indicator.active {
-        background: rgb(122, 228, 228);
-        transform: scale(1.2);
-      }
+      .carousel-indicators {
+        display: flex;
+        gap: 10px;
 
+        .indicator {
+          width: 12px;
+          height: 12px;
+          background: rgb(149, 160, 160);
+          border-radius: 50%;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+        }
+
+        .indicator.active {
+          background: rgb(122, 228, 228);
+          transform: scale(1.2);
+        }
+
+      }
     }
   }
 }
 
-/* Añadimos estilos para dispositivos móviles */
-@media (width: 768px) {
+/* Media queries optimizadas */
+@media (max-width: 750px) {
+  .background-header {
+    height: 50%;
+    
+    .logo-container img {
+      width: 17rem;
+      height: 5.5rem;
+      position: relative;
+      left: -1.6%;
+    }
+  }
+  
+  .video-container {
+    top: 5%;
+    
+    video {
+      height: 30vh;
+    }
+  }
+  
+  .nav-container {
+    top: 53.5%;
+    gap: 0.5rem;
+
+    a img {
+      width: 4.5rem;
+      height: 3rem;
+    }
+    
+    .button-center {
+      margin-top: -20%;
+    }
+  }
+  
+  .carousel-container {
+    height: 90rem;
+    overflow: hidden;
+    padding: 0;
+  }
+  
+  .carousel {
+    height: 90rem;
+    margin-top: 15rem;
+  }
+
+  .carousel-items {
+    height: 70rem;
+  }
+  
   .carousel-item {
-    width: 85%;
-    height: 60%;
+    width: 90%;
   }
 
   .carousel-item.prev {
-    transform: scale(0.8) translateX(-60%) translateY(0) translateZ(-100px);
+    transform: scale(0.2) translateX(-60%) translateY(0) translateZ(-100px);
   }
 
   .carousel-item.next {
-    transform: scale(0.8) translateX(60%) translateY(0) translateZ(-100px);
+    transform: scale(0.2) translateX(60%) translateY(0) translateZ(-100px);
   }
 
   .carousel-item.far-prev {
-    transform: scale(0.7) translateX(-110%) translateY(0) translateZ(-200px);
+    transform: scale(0.2) translateX(-110%) translateY(0) translateZ(-200px);
   }
 
   .carousel-item.far-next {
-    transform: scale(0.7) translateX(110%) translateY(0) translateZ(-200px);
+    transform: scale(0.2) translateX(110%) translateY(0) translateZ(-200px);
   }
 
   .carousel-prev,
@@ -287,5 +336,81 @@
     width: 40px;
     height: 40px;
     font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 500px) {
+  .nav-container a img {
+    width: 5rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width: 750px) {
+  .nav-container {
+    top: 53.5%;
+    gap: 0.1rem;
+
+    a img {
+      width: 5.5rem;
+      height: 4rem;
+    }
+    
+    .button-center {
+      margin-top: -35%;
+    }
+  }
+  
+  .carousel-container {
+    margin-top: -24rem;
+  }
+}
+
+@media (min-width: 950px) {
+  .nav-container {
+    gap: 1rem;
+    
+    a img {
+      width: 7rem;
+      height: 4rem;
+    }
+    
+    .button-center {
+      margin-top: -10%;
+    }
+  }
+  
+  .carousel-container {
+    margin-top: -22rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .nav-container {
+    gap: 0.5rem;
+    
+    a img {
+      width: 8.5rem;
+      height: 4rem;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav-container {
+    top: 52.5%;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .nav-container {
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .nav-container {
+    gap: 4rem;
   }
 }

@@ -12,9 +12,9 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'includes/phpmailer/Exception.php';
-require 'includes/phpmailer/PHPMailer.php';
-require 'includes/phpmailer/SMTP.php';
+require 'includes/phpmailer/language/src/Exception.php';
+require 'includes/phpmailer/language/src/PHPMailer.php';
+require 'includes/phpmailer/language/src/SMTP.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Recoger datos del formulario

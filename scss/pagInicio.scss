@@ -128,7 +128,7 @@
     height: 48rem;
     position: relative;
     perspective: 62.5rem;
-    background-color: #5f77b8;
+    background-color: #000000c0;
 
     border-radius: 1.25rem;
     overflow: hidden;
@@ -152,7 +152,7 @@
       margin: auto;
       background: #fff;
       border-radius: 10px;
-      box-shadow: 0 10px 1.875rem rgba(96, 122, 118, 0.5);
+      box-shadow: 0 10px 1.875rem rgba(86, 204, 186, 0.5);
       opacity: 0;
       overflow: hidden;
       transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
@@ -265,7 +265,7 @@
 @media (max-width: 750px) {
   .background-header {
     height: 50%;
-    
+
     .logo-container img {
       width: 17rem;
       height: 5.5rem;
@@ -273,15 +273,15 @@
       left: -1.6%;
     }
   }
-  
+
   .video-container {
     top: 5%;
-    
+
     video {
       height: 30vh;
     }
   }
-  
+
   .nav-container {
     top: 53.5%;
     gap: 0.5rem;
@@ -290,18 +290,18 @@
       width: 4.5rem;
       height: 3rem;
     }
-    
+
     .button-center {
       margin-top: -20%;
     }
   }
-  
+
   .carousel-container {
     height: 90rem;
     overflow: hidden;
     padding: 0;
   }
-  
+
   .carousel {
     height: 90rem;
     margin-top: 15rem;
@@ -310,7 +310,7 @@
   .carousel-items {
     height: 70rem;
   }
-  
+
   .carousel-item {
     width: 90%;
   }
@@ -355,12 +355,12 @@
       width: 5.5rem;
       height: 4rem;
     }
-    
+
     .button-center {
       margin-top: -35%;
     }
   }
-  
+
   .carousel-container {
     margin-top: -24rem;
   }
@@ -369,17 +369,17 @@
 @media (min-width: 950px) {
   .nav-container {
     gap: 1rem;
-    
+
     a img {
       width: 7rem;
       height: 4rem;
     }
-    
+
     .button-center {
       margin-top: -10%;
     }
   }
-  
+
   .carousel-container {
     margin-top: -22rem;
   }
@@ -388,7 +388,7 @@
 @media (min-width: 1000px) {
   .nav-container {
     gap: 0.5rem;
-    
+
     a img {
       width: 8.5rem;
       height: 4rem;

@@ -62,7 +62,7 @@ include_once '../includes/head.php';
 
                         <div class="contact-form-input">
                             <div class="contact-input-icon">
-                                <i class="fa-solid fa-circle-user"></i>
+                                <i class="fa-regular fa-circle-user"></i>
                                 <input type="text" name="apellido" required>
                                 <label>Apellido</label>
                             </div>
@@ -70,7 +70,7 @@ include_once '../includes/head.php';
 
                         <div class="contact-form-input">
                             <div class="contact-input-icon">
-                                <i class="fa-regular fa-envelope"></i>
+                                <i class="fa-solid fa-envelope"></i>
                                 <input type="email" name="email" required>
                                 <label>Email</label>
                             </div>
@@ -94,7 +94,7 @@ include_once '../includes/head.php';
 
                         <div class="contact-form-input">
                             <div class="contact-input-icon">
-                                <i class="fa-regular fa-comment-dots"></i>
+                                <i class="fa-solid fa-comment-dots"></i>
                                 <textarea name="comentarios" required></textarea>
                                 <label>Comentarios</label>
                             </div>

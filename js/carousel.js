@@ -8,7 +8,7 @@ const reels = async () => {
     const datos = await response.json();
     //le envíamos los datos de los reels como parametro a la función MostrarPost
     MostrarPost(datos);
-    console.log("conexión exitosa", datos.data); //el data es un objeto con todos los datos de los reels
+    //console.log("conexión exitosa", datos.data); //el data es un objeto con todos los datos de los reels
   } catch (error) {
     console.log("error no se pudo conectar con la API", error);
   }

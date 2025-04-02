@@ -12,9 +12,9 @@
     <section class="redes">
         <img src="<?php echo SITE_URL; ?>images/fotos/Home/Botones/redes_sociales.png" alt="Redes sociales">
         <div class="redes-sociales">
-            <a href="#"><img src="<?php echo SITE_URL; ?>images/fotos/Home/Botones/facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="<?php echo SITE_URL; ?>images/fotos/Home/Botones/instagram.png" alt="Instagram"></a>
-            <a href="#"><img src="<?php echo SITE_URL; ?>images/fotos/Home/Botones/tiktok.png" alt="TikTok"></a>
+            <a href="https://www.facebook.com/starparkco"><img src="<?php echo SITE_URL; ?>images/fotos/Home/Botones/facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/starparkco/?hl=es-la"><img src="<?php echo SITE_URL; ?>images/fotos/Home/Botones/instagram.png" alt="Instagram"></a>
+            <a href="http://tiktok.com/@starparkco?lang=es"><img src="<?php echo SITE_URL; ?>images/fotos/Home/Botones/tiktok.png" alt="TikTok"></a>
         </div>
     </section>
 

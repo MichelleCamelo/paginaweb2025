@@ -1,5 +1,8 @@
 // Componentes y páginas específicas
 @use 'base';
+@use 'blog';
+@use 'contacto';
+@use 'cotizar';
 @use 'nuestraEmpresa';
 @use 'paginicio';
 @use 'parque';
@@ -8,5 +11,3 @@
 @use 'servicios';
 @use 'pregFrecuentes';
 @use 'tratamientoDatos';
-@use 'contacto';
-@use 'blog';

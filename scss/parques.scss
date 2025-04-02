@@ -145,14 +145,6 @@
   filter: drop-shadow(0 0 20px rgba(218, 165, 32, 0.6));
 }
 
-@media (max-width: 1200px) {
-  .de-interes {
-    gap: 5rem;
-    /* Ajuste para pantallas medianas */
-    flex-wrap: wrap;
-    /* Permite que los elementos se ajusten */
-  }
-}
 
 @media (max-width: 768px) {
   .planets-row {
@@ -163,11 +155,5 @@
   .planet-item2 {
     width: 8rem;
     height: 8rem;
-  }
-
-  .de-interes {
-    gap: 2rem;
-    flex-direction: column;
-    align-items: center;
   }
 }

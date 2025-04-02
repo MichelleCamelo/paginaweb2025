@@ -33,7 +33,7 @@ include_once '../includes/head.php';
     </div>
     <div class="carousel"> <!-- Contenedor del carrusel -->
         <div class="carousel-items"> <!-- Contenedor de los items del carrusel -->
-            <div class="carousel-item active"> <!-- Item activo -->
+            <!-- <div class="carousel-item active">
                 <iframe class="instagram-media" src="https://www.instagram.com/reel/DEQh-1jupwM/embed"></iframe>
             </div>
             <div class="carousel-item">
@@ -50,13 +50,13 @@ include_once '../includes/head.php';
             </div>
             <div class="carousel-item">
                 <iframe class="instagram-media" src="https://www.instagram.com/reel/DCIc-ELNlGL/embed"></iframe>
-            </div>
+            </div> -->
         </div>
 
         <div class="carousel-controls">
-            <button class="carousel-prev" aria-label="Anterior">&lt;</button>
+            <button class="carousel-prev" aria-label="Anterior">◀︎</button>
             <div class="carousel-indicators"></div>
-            <button class="carousel-next" aria-label="Siguiente">&gt;</button>
+            <button class="carousel-next" aria-label="Siguiente">▶︎</button>
         </div>
     </div>
 </main>

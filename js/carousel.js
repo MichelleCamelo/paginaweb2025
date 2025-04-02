@@ -1,4 +1,50 @@
-document.addEventListener("DOMContentLoaded", function () {
+const token = "IGAANnrZAmKGiFBZAE80NUp3UXE1cUo0V1ptRERQQ3pYcTNpd3AxWkc5UzAwNldxcFRNTWV0QlhaRVEyZAnI0UDRrN1VkcFoxc1VRcndScG50SnZAQN1poTm5tTXc2T2RYek5nTGg5TTA4cTM2UjZAUdjg4cXVMTzVKbVNMa0dCQmhhdwZDZD";
+
+const reels = async () => {
+  try {
+    const response = await fetch(
+      `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp&access_token=${token}`
+    );
+    const datos = await response.json();
+    //le envíamos los datos de los reels como parametro a la función MostrarPost
+    MostrarPost(datos);
+    console.log("conexión exitosa", datos.data); //el data es un objeto con todos los datos de los reels
+  } catch (error) {
+    console.log("error no se pudo conectar con la API", error);
+  }
+};
+
+const MostrarPost = (reels) => {
+  // Atrapa los datos de los reels y los muestra en el HTML
+  const containerReels = document.querySelector(".carousel-items");
+
+  // Usa .slice(0, 10) para limitar los reels a los primeros 10 (0 es de donde inicia el array del json y 10 donde termina).
+  reels.data.slice(0, 9).forEach((reel, index) => {
+    const reelCard = document.createElement("div");
+    reelCard.classList.add("carousel-item");
+    if (index === 0) reelCard.classList.add("active"); // El primer item activo
+
+    if (reel.media_type == "IMAGE") {
+      reelCard.innerHTML += `
+        <img class="instagram-media" src="${reel.media_url}" alt="Post de Instagram">
+      `;
+    } else if (reel.media_type == "VIDEO") {
+      reelCard.innerHTML += `
+        <video class="instagram-media" src="${reel.media_url}" controls></video>
+      `;
+    } else if (reel.media_type == "CAROUSEL_ALBUM") {
+      reelCard.innerHTML += `
+        <img class="instagram-media" src="${reel.media_url}" alt="Post de Instagram">
+      `;
+    }
+    containerReels.appendChild(reelCard);
+  });
+  inicializarCarousel();
+};
+reels();
+
+
+const inicializarCarousel = () => {
   const carousel = document.querySelector(".carousel");
   const carouselItems = document.querySelectorAll(".carousel-item");
   const prevBtn = document.querySelector(".carousel-prev");
@@ -153,4 +199,4 @@ document.addEventListener("DOMContentLoaded", function () {
       clearInterval(intervalId);
     }
   }
-});
+};

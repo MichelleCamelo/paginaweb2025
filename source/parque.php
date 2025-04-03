@@ -154,11 +154,11 @@ $parque = $parques[$parque_id];
             </div>
         </article>
         <article class="park-info">
-            <div class="park-info-container">
+            
                 <div class="galeria-item">
                     <img src="<?php echo $parque['park_info']; ?>" alt="Imagen informativa del parque">
                 </div>
-            </div>
+            
         </article>
     </main>
     <!-- Sección de información -->

@@ -69,7 +69,7 @@ body {
   background-color: #400645;
   z-index: 15;
   transition: 0.3s ease;
-  padding-top: 60px;
+  padding-top: 3.75rem;
 
   ul {
     list-style: none;
@@ -207,15 +207,15 @@ body {
   align-items: center;
   flex-direction: column;
   position: fixed;
-  bottom: 15%;
+  bottom: 55%;
   right: 0.125rem;
   z-index: 5;
 
 
   a img {
     margin-top: 0.625rem;
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
     filter: drop-shadow(0 0 10px rgb(93, 189, 204));
     transition: all 0.3s ease-in-out;
 

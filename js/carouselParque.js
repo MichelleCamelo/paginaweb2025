@@ -13,6 +13,13 @@ document.addEventListener('DOMContentLoaded', function () {
     cargarImagenes();
 });
 
+// Función para detectar si el dispositivo es táctil
+function isTouchDevice() {
+    return (('ontouchstart' in window) ||
+        (navigator.maxTouchPoints > 0) ||
+        (navigator.msMaxTouchPoints > 0));
+}
+
 function cargarImagenes() {
     // Obtenemos el contenedor donde se mostrarán las imágenes
     const carouselItems = document.querySelector(".park-carousel-items");
@@ -104,6 +111,10 @@ function inicializarCarousel() {
     let intervalId;
     const totalItems = carouselItems.length;
 
+    // Detectar si es un dispositivo táctil
+    const isTouchDeviceFlag = isTouchDevice();
+    console.log("¿Es dispositivo táctil?", isTouchDeviceFlag);
+
     // Limpiar los indicadores existentes
     indicatorsContainer.innerHTML = '';
 
@@ -124,21 +135,26 @@ function inicializarCarousel() {
 
     // Inicializar el carousel
     updateCarousel();
-    startAutoplay();
 
-    // Event listeners
+    // Solo iniciar autoplay si NO es un dispositivo táctil
+    if (!isTouchDeviceFlag) {
+        startAutoplay();
+
+        // Solo añadir estos listeners si hay autoplay
+        carousel.addEventListener("mouseenter", () => {
+            stopAutoplay();
+        });
+
+        carousel.addEventListener("mouseleave", () => {
+            startAutoplay();
+        });
+    }
+
+    // Event listeners para los botones (siempre necesarios)
     prevBtn.addEventListener("click", prevSlide);
     nextBtn.addEventListener("click", nextSlide);
 
-    carousel.addEventListener("mouseenter", () => {
-        stopAutoplay();
-    });
-
-    carousel.addEventListener("mouseleave", () => {
-        startAutoplay();
-    });
-
-    // Touch events para dispositivos móviles
+    // Touch events para dispositivos móviles (siempre necesarios para navegación táctil)
     let touchStartX = 0;
     let touchEndX = 0;
 
@@ -146,7 +162,10 @@ function inicializarCarousel() {
         "touchstart",
         (e) => {
             touchStartX = e.changedTouches[0].screenX;
-            stopAutoplay();
+            // En dispositivos táctiles, no necesitamos detener el autoplay aquí porque no hay autoplay
+            if (!isTouchDeviceFlag) {
+                stopAutoplay();
+            }
         },
         { passive: true }
     );
@@ -156,7 +175,10 @@ function inicializarCarousel() {
         (e) => {
             touchEndX = e.changedTouches[0].screenX;
             handleSwipe();
-            startAutoplay();
+            // En dispositivos táctiles, no necesitamos reiniciar el autoplay
+            if (!isTouchDeviceFlag) {
+                startAutoplay();
+            }
         },
         { passive: true }
     );

@@ -1,6 +1,7 @@
 <?php
 require_once '../includes/config.php';
 $use_carousel = false;
+$use_carouselParque = true;
 include_once '../includes/head.php';
 
 // Obtener el ID del parque de la URL
@@ -118,66 +119,76 @@ if (!isset($parques[$parque_id])) {
 $parque = $parques[$parque_id];
 ?>
 <!-- Pagina de cada parque -->
-<div class="sedes-spaces-background">
+<div class="sedes-space-background">
     <!-- barra navegacion -->
     <?php
     include_once '../includes/navbar.php';
     ?>
     <!-- Sección Ubicación (nave.png) -->
-    <section class="ubication">
-        <section class="ubication-map">
-            <div class="map-container">
-                <iframe src="<?php echo $parque['mapa']; ?>" width="100%" height="550" style="border:0;"
-                    allowfullscreen="">
-                </iframe>
+    <div class="info-parques-floor">
+        <header class="ubication">
+            <section class="ubication-map">
+                <div class="map-container">
+                    <iframe src="<?php echo $parque['mapa']; ?>" width="100%" height="550" style="border:0;"
+                        allowfullscreen="">
+                    </iframe>
+                </div>
+            </section>
+        </header>
+        <!-- Sección de nave -->
+        <section class="nave-container">
+            <img src="../images/fotos/Planetas_Sedes/nave.png" alt="Nave">
+            <div class="sede-container">
+                <div class="park-site">
+                    <img src="<?php echo $parque['park-site']; ?>" alt="Sede <?php echo $parque['nombre']; ?>">
+                </div>
             </div>
         </section>
-    </section>
-    <!-- Sección de nave -->
-    <header class="nave-container">
-        <img src="../images/fotos/Planetas_Sedes/nave.png" alt="Nave">
-        <div class="sede-container">
-            <div class="park-site">
-                <img src="<?php echo $parque['park-site']; ?>" alt="Sede <?php echo $parque['nombre']; ?>">
-            </div>
-        </div>
-    </header>
-    <!-- Sección de galería -->
-    <main class="view-container">
-        <article class="galeria">
-            <div class="galeria-grid">
-                <?php foreach ($parque['galeria'] as $imagen): ?>
-                    <div class="galeria-item">
-                        <img src="<?php echo $imagen; ?>" alt="Imagen de <?php echo $parque['nombre']; ?>">
+        <!-- Sección de la galería -->
+        <div class="parque-images-floor">
+            <!-- Sección del carrusel -->
+            <main class="park-carousel-container">
+                <!-- Almacenamos las imágenes como JSON para que JavaScript las procese -->
+                <div class="galeria-container" data-imagenes='<?php echo json_encode($parque['galeria']); ?>' style="display:none;"></div>
+
+                <article class="park-carousel">
+                    <!-- El contenedor donde JavaScript insertará los items del carrusel -->
+                    <div class="park-carousel-items">
+                        <!-- Los elementos se crearán dinámicamente con JavaScript -->
                     </div>
-                <?php endforeach; ?>
-            </div>
-        </article>
-        <article class="park-info">
-            
+                    <div class="carousel-controls">
+                        <button class="carousel-prev" aria-label="Anterior">◀︎</button>
+                        <div class="carousel-indicators"></div>
+                        <button class="carousel-next" aria-label="Siguiente">▶︎</button>
+                    </div>
+                </article>
+            </main>
+            <!-- Sección de información del parque -->
+            <article class="park-info">
                 <div class="galeria-item">
                     <img src="<?php echo $parque['park_info']; ?>" alt="Imagen informativa del parque">
                 </div>
-            
-        </article>
-    </main>
-    <!-- Sección de información -->
-    <article class="info-container">
-        <div class="lines">
-            <img src="../images/fotos/Planetas_Sedes/azul_y_rojo.png" alt="Decoración azul y rojo">
+            </article>
         </div>
-        <section class="hablemos-content">
-            <div class="dominick-container">
-                <img src="../images/fotos/Planetas_Sedes/dominick.png" alt="Dominick">
+        <!-- Sección de información -->
+        <article class="info-container">
+            <div class="lines">
+                <img src="../images/fotos/Planetas_Sedes/azul_y_rojo.png" alt="Decoración azul y rojo">
             </div>
-            <div class="hablemos-button">
-                <p><span>¡Hola!</span> <br>Estoy aquí para ayudarte</p>
-                <a href="https://wa.me/573118090610" class="whatsapp" target="_blank">
-                    <img src="../images/fotos/Planetas_Sedes/hablemos.png" alt="Hablemos">
-                </a>
-            </div>
-        </section>
-    </article>
+            <section class="hablemos-content">
+                <div class="dominick-container">
+                    <img src="../images/fotos/Planetas_Sedes/dominick.png" alt="Dominick">
+                </div>
+                <div class="hablemos-button">
+                    <p><span>¡Hola!</span> <br>Estoy aquí para ayudarte</p>
+                    <a href="https://wa.me/573118090610" class="whatsapp" target="_blank">
+                        <img src="../images/fotos/Planetas_Sedes/hablemos.png" alt="Hablemos">
+                    </a>
+                </div>
+            </section>
+        </article>
+    </div>
+
 </div>
 <!-- Botones de whatsapp y dominick, lado derecho -->
 <?php

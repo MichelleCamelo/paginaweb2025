@@ -12,6 +12,7 @@
     
     <?php if(isset($use_carousel) && $use_carousel): ?>
     <script defer src="<?php echo SITE_URL; ?>js/carousel.js"></script>
+    <script defer src="<?php echo SITE_URL; ?>js/contactoToggle.js"></script>
     <?php endif; ?>
     
     <meta name="theme-color" content="#314c9c">

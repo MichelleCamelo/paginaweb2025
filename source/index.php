@@ -13,7 +13,8 @@ include_once '../includes/head.php';
         </video>
     </section>
     <!-- Contenedor del header -->
-    <header class="background-header">
+     <div class="header-father">
+     <header class="background-header">
         <!-- Logo -->
         <div class="logo-container">
             <img src="../images/fotos/Home/Botones/Starpark.png" alt="Logo StarPark">
@@ -26,6 +27,7 @@ include_once '../includes/head.php';
             <a href="contacto.php"><img src="../images/fotos/Home/Botones/contacto.png" alt="Contacto"></a>
         </nav>
     </header>
+     </div>
     <!-- Contenedor del main -->
     <main class="carousel-container"> <!-- Contenedor principal del carrusel -->
         <div class="title-novedades">

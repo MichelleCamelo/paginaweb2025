@@ -1,4 +1,4 @@
-.index-space-background{
+.index-space-background {
   background-color: #344ca0;
 }
 
@@ -33,7 +33,7 @@
 /* Estilos del video centrado */
 .inicio-video-container {
   position: absolute;
-  top: 17%;
+  top: 40%;
   left: 50%;
   transform: translatex(-50%);
   display: flex;
@@ -95,7 +95,6 @@
   object-position: center;
   margin-top: -15rem;
   margin-bottom: 0rem;
-  padding: 1.25rem;
   padding-bottom: 20rem;
   display: flex;
   flex-direction: column;
@@ -267,14 +266,40 @@
 
 /* Media queries optimizadas */
 @media (max-width: 750px) {
+  .header-father {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    text-align: center; /* Esto ayuda a centrar elementos inline */
+  }
+  
   .background-header {
-    height: 50%;
+    display: block;
+    width: 185%;
+    transform: translateX(-23.5%); /* Desplazamos a la izquierda 1/4 del ancho */
+    margin: 0; /* Eliminamos márgenes */
+  
 
     .logo-container img {
-      width: 17rem;
-      height: 5.5rem;
+      width: 31rem;
+      height: 8rem;
       position: relative;
       left: -1.6%;
+    }
+  }
+
+  /* Estilos del video centrado */
+  .inicio-video-container {
+    top: 10%;
+    left: 50%;
+    overflow: hidden;
+    video {
+      position: relative;
+      left: 1.5%;
+      z-index: 0;
+      width: 100vw;
+      height: 25vh;
+      object-fit: cover;
     }
   }
 
@@ -291,8 +316,8 @@
     gap: 0.5rem;
 
     a img {
-      width: 4.5rem;
-      height: 3rem;
+      width: 8.5rem;
+      height: 4rem;
     }
 
     .button-center {
@@ -304,11 +329,15 @@
     height: 90rem;
     overflow: hidden;
     padding: 0;
-  }
+    margin-top: -20rem;
 
-  .carousel {
-    height: 90rem;
-    margin-top: 15rem;
+    .carousel {
+      display: flex;
+      height: 90rem;
+      margin-top: -15rem;
+      align-items: center;
+    }
+
   }
 
   .carousel-items {
@@ -343,13 +372,26 @@
   }
 }
 
-@media (min-width: 500px) {
-  .nav-container a img {
-    width: 5rem;
-    height: 2.5rem;
+/* Para pantallas entre 300px y 400px */
+@media (min-width: 300px) and (max-width: 400px) {
+  .inicio-video-container {
+    top: 12%;
+    video {
+      width: 90vw;
+      height: 30vh;
+    }
   }
 }
 
+/* Para pantallas mayores a 400px */
+@media (min-width: 401px) {
+  .inicio-video-container {
+    top: 12%;
+    .video-container{
+      height: 35vh;
+    }
+  }
+}
 @media (min-width: 750px) {
   .nav-container {
     top: 53.5%;
@@ -362,6 +404,15 @@
 
     .button-center {
       margin-top: -35%;
+    }
+  }
+
+  .inicio-video-container {
+    top: 12%;
+
+    video {
+      width: 50vw;
+      height: 35vh;
     }
   }
 
@@ -388,25 +439,52 @@
     margin-top: -22rem;
   }
 }
-
 @media (min-width: 1000px) {
+  .background-header .logo-container img {
+    left: -1.5rem;
+    height: 13vh;
+  }
   .nav-container {
     gap: 0.5rem;
-
+    top: 52%;
     a img {
-      width: 8.5rem;
-      height: 4rem;
+      width: 11rem;
+      height: 4.5rem;
+    }
+  }
+  .inicio-video-container {
+    top: 13%;
+
+    video {
+      width: 60vw;
+      height: 35.5vh;
     }
   }
 }
-
-@media (min-width: 1200px) {
+@media (min-width: 1600px) {
+  .background-header .logo-container img {
+    width: 40vw;
+    height: 11vh;
+    left: -2rem;
+    position: relative;
+  }
   .nav-container {
+    gap: 0.5rem;
     top: 52.5%;
-    gap: 1rem;
+    a img {
+      width: 10rem;
+      height: 4.5rem;
+    }
+  }
+  .inicio-video-container {
+    top: 13%;
+
+    video {
+      width: 60vw;
+      height: 32vh;
+    }
   }
 }
-
 @media (min-width: 1400px) {
   .nav-container {
     gap: 2rem;

@@ -147,13 +147,112 @@
 
 
 @media (max-width: 768px) {
-  .planets-row {
-    gap: 1rem;
+  /* Ajustes para los títulos */
+  .location-central {
+    width: 12rem;
+    height: 10rem;
+    margin-bottom: 1rem;
   }
-
-  .planet-item,
-  .planet-item2 {
-    width: 8rem;
-    height: 8rem;
+  
+  /* Ajuste general para primera sección (Bogotá) */
+  .starpark-locations .planets-row {
+    position: relative;
+    height: 400px;
+    width: 100%;
+  }
+  
+  /* Ajustes para los planetas de Bogotá - TAMAÑO AUMENTADO */
+  .starpark-locations .planet-item {
+    position: absolute;
+    width: 10rem;  /* Aumentado de 7rem a 10rem */
+    height: 10rem; /* Aumentado de 7rem a 10rem */
+  }
+  
+  /* Posicionamiento específico para planetas de Bogotá */
+  .starpark-locations .planet-orange {
+    top: 10%;
+    left: 15%;
+  }
+  
+  .starpark-locations .planet-purple {
+    top: 10%;
+    right: 15%;
+  }
+  
+  .starpark-locations .planet-yellow {
+    bottom: 15%;
+    left: 15%;
+  }
+  
+  .starpark-locations .planet-pink {
+    bottom: 15%;
+    right: 15%;
+  }
+  
+  /* Ajustes para la sección Resto del País */
+  .resto-pais {
+    margin-top: 0;
+  }
+  .location-central{
+    height: 40%;
+    width: 40%;
+  }
+  .resto-pais .planets-row {
+    position: relative;
+    height: 500px;
+    width: 100%;
+  }
+  
+  /* Resetear todos los estilos previos para los planetas de Resto del País */
+  .resto-pais .planet-item,
+  .resto-pais .planet-item2,
+  .resto-pais .planet-item-3 {
+    position: absolute;
+    width: 10rem;  /* Aumentado de 7rem a 10rem */
+    height: 10rem; /* Aumentado de 7rem a 10rem */
+    padding: 0;
+    margin: 0;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: none;
+  }
+  
+  /* Posicionamiento específico para cada planeta de Resto del País */
+  .resto-pais .planet-red {
+    top: 20%;
+    left: 15%;
+  }
+  
+  .resto-pais .planet-saturn {
+    top: 20%;
+    right: 15%;
+  }
+  
+  .resto-pais .planet-earth {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .resto-pais .planet-blue {
+    bottom: 10%;
+    left: 15%;
+  }
+  
+  .resto-pais .planet-green {
+    bottom: 10%;
+    right: 15%;
+  }
+  
+  /* Ajustar comportamiento de hover en móvil */
+  .resto-pais .planet-item:hover,
+  .resto-pais .planet-item2:hover {
+    transform: scale(1.1);
+  }
+  
+  .resto-pais .planet-earth:hover {
+    transform: translateX(-50%) scale(1.1);
   }
 }

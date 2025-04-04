@@ -101,9 +101,19 @@
 
 @media (max-width: 768px) {
   .privacy-container {
-    padding: 1.25rem;
+    .privacy-header {
+      height: 100%;
+      img {
+        width: 70%;
+        height: 70%;
+      }
+    }
   }
-
+  .privacy-content{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
   h1 {
     font-size: 2em;
   }

@@ -78,6 +78,13 @@
 }
 
 @media (max-width: 768px) {
+  .preguntas-frecuentes-container {
+    img {
+      width: 70%;
+      height: 70%;
+      object-fit: contain;
+    }
+  }
   .cta-section h2 {
     font-size: 2em;
   }

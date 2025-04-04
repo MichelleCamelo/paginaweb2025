@@ -211,7 +211,19 @@ body {
   right: 0.125rem;
   z-index: 5;
 
+  i {
+    display: none;
+    top: 30rem;
+    font-size: 4rem;
+    padding-bottom: 2rem;
+    filter: drop-shadow(0 0 10px rgb(93, 189, 204));
+    transition: all 0.3s ease-in-out;
 
+    &:hover {
+      transform: scale(1.1);
+
+    }
+  }
   a img {
     margin-top: 0.625rem;
     width: 6rem;
@@ -224,5 +236,59 @@ body {
 
     }
 
+  }
+}
+/* Media query sólo para ajustes mínimos en pantallas muy pequeñas */
+@media (max-width: 950px) {
+  :root {
+    font-size: calc(0.6vw + 0.6vh + 0.6vmin);
+  }
+  .navigation-container {
+    a {
+      left: 0;
+      img {
+        width: 70%;
+        height: 100%;
+      }
+    }
+  }
+  .de-interes {
+    gap: 0.5rem;
+  }
+  .de-interes li {
+    margin: 0.1rem 0;
+  }
+  .de-interes .redes-sociales a {
+    width: 5.5rem;
+    height: 0rem;
+    margin-top: 0.9rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (min-width: 1000px) {
+  .de-interes {
+    gap: 10rem;
+  }
+  .de-interes li {
+    margin: 0.5rem 0;
+  }
+  .de-interes .redes-sociales a {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+/* Media query para pantallas grandes */
+@media (min-width: 1400px) {
+  :root {
+    font-size: calc(0.4vw + 0.4vh + 0.4vmin);
+  }
+  .de-interes {
+    gap: 5rem;
+  }
+  .de-interes li {
+    margin: 0.1rem 0;
+    width: 10rem;
   }
 }

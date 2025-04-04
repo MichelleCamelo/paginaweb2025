@@ -42,14 +42,22 @@ include_once '../includes/head.php';
                     entretenimiento. Hoy en día, el objetivo es el mismo: Brindar experiencias de diversión para
                     toda la
                     familia en parques de atracciones, ubicados en centros comerciales como:</p>
-
-                <div class="locations">
-                    <p>- Hayuelos, Ecoplaza, Bulevar, Altavista y Paseo Villa del Río en Bogotá.</p>
-                    <p>- Puerta del Norte, en Medellín</p>
-                    <p>- San pedro Plaza, en Neiva</p>
-                    <p>- Ecoplaza, en Mosquera</p>
-                    <p>- Cosmocentro, en Cali</p>
+                <div class="locations-dominic">
+                    <div class="locations">
+                        <p>- Hayuelos, Ecoplaza, Bulevar, Altavista y Paseo Villa del Río en Bogotá.</p>
+                        <p>- Puerta del Norte, en Medellín</p>
+                        <p>- San pedro Plaza, en Neiva</p>
+                        <p>- Ecoplaza, en Mosquera</p>
+                        <p>- Cosmocentro, en Cali</p>
+                    </div>
+                    <!-- Dominic animado -->
+                    <div class="dominic-container dominic-mobile">
+                        <div class="dominic">
+                            <img src="../images/fotos/quienes_somos/imagenes/dominic.png" alt="Star Park Mascota">
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>

@@ -1,6 +1,6 @@
 <?php
 // procesar_cotizacion.php
-require_once 'includes/config.php';
+require_once '../includes/config.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Recoger los datos del formulario
@@ -20,6 +20,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // 3. Enviar email al administrador
     
     // Redireccionar con mensaje de éxito
-    header('Location: cotizar.php?status=success');
+    header('Location: ../source/cotizar.php?status=success');
     exit;
 }

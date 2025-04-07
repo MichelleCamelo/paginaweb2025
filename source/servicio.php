@@ -18,7 +18,7 @@ include_once '../includes/head.php';
             <div class="service-form-container">
                 <h2>Servicio al <br> cliente</h2>
 
-                <form class="serviceForm" action="procesar_formulario.php" method="post">
+                <form class="serviceForm" action="procesarservicio.php" method="post">
                     <div class="service-form-input">
                         <div class="service-form-group">
                             <i class="fa-solid fa-circle-user"></i>

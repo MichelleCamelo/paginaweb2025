@@ -2,7 +2,7 @@
 // Configuraciones generales del sitio
 define('SITE_NAME', 'StarPark');
 define('SITE_URL', 'http://localhost/paginaweb2025/');
-
+//https://jgdigital.com.co/paginaweb2025/
 // Rutas del sitio
 define('ROOT_PATH', dirname(__DIR__) . '/');
 define('INCLUDES_PATH', ROOT_PATH . 'includes/');

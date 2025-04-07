@@ -23,29 +23,25 @@ include_once '../includes/head.php';
                         <label class="service-option">
                             <input type="radio" name="tipo_evento" value="cumpleanos">
                             <span class="option-content">
-                                <img src="" alt="Cumpleaños">
-                                <span>Cumpleaños</span>
+                                <img src="../images/fotos/servicios/imagenes/CelebraCumple.png" alt="Cotizar evento Cumpleaños">
                             </span>
                         </label>
                         <label class="service-option">
                             <input type="radio" name="tipo_evento" value="colegios">
                             <span class="option-content">
-                                <img src="" alt="Colegios">
-                                <span>Colegios</span>
+                                <img src="../images/fotos/servicios/imagenes/FiestasColegios.png" alt="Cotizar evento Colegios">
                             </span>
                         </label>
                         <label class="service-option">
                             <input type="radio" name="tipo_evento" value="empresarial">
                             <span class="option-content">
-                                <img src="" alt="Empresarial">
-                                <span>Empresarial</span>
+                                <img src="../images/fotos/servicios/imagenes/EventosEmpresariales.png" alt="Cotizar evento Empresarial">
                             </span>
                         </label>
                         <label class="service-option">
                             <input type="radio" name="tipo_evento" value="infantil">
                             <span class="option-content">
-                                <img src="" alt="Infantil">
-                                <span>Infantil</span>
+                                <img src="../images/fotos/servicios/imagenes/FiestasInfantiles.png" alt="Infantil">
                             </span>
                         </label>
                     </div>
@@ -80,7 +76,7 @@ include_once '../includes/head.php';
                     <div class="form-grid">
                         <div class="input-group">
                             <select name="sede" required>
-                                <option value="">Selecciona una sede</option>
+                                <option no-value>Selecciona una sede</option>
                                 <option value="hayuelos">Hayuelos</option>
                                 <option value="altavista">Altavista</option>
                                 <option value="niza">Bulevar Niza</option>
@@ -96,9 +92,9 @@ include_once '../includes/head.php';
                             <label>Número de Invitados</label>
                         </div>
                     </div>
+                    <h3>Comentarios Adicionales</h3>
                     <div class="input-group full-width">
-                        <textarea name="comentarios" rows="4"></textarea>
-                        <label>Comentarios Adicionales</label>
+                        <textarea name="comentarios" rows="4" placeholder="Deja tu comentario aquí"></textarea>
                     </div>
                 </div>
 

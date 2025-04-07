@@ -21,10 +21,10 @@ include_once '../includes/head.php';
         </div>
         <!-- Navegación -->
         <nav class="nav-container">
-            <a href="parques.php"> <img src="../images/fotos/Home/Botones/parques.png" alt="Parques"> </a>
+            <a href="../source/parques.php"> <img src="../images/fotos/Home/Botones/parques.png" alt="Botón Parques"> </a>
             <a class="button-center" href="../source/servicios.php"><img src="../images/fotos/Home/Botones/servicios.png"
-                    alt="Servicos"></a>
-            <a href="contacto.php"><img src="../images/fotos/Home/Botones/contacto.png" alt="Contacto"></a>
+                    alt="Botón Servicos"></a>
+            <a href="../source/contacto.php"><img src="../images/fotos/Home/Botones/contacto.png" alt="Bontón Contacto"></a>
         </nav>
     </header>
      </div>

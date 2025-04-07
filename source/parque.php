@@ -167,15 +167,6 @@ $parque = $parques[$parque_id];
             </main>
             <!-- Sección de información del parque -->
             <article class="park-info">
-                    <div class="carousel-controls">
-                        <button class="carousel-prev" aria-label="Anterior">◀︎</button>
-                        <div class="carousel-indicators"></div>
-                        <button class="carousel-next" aria-label="Siguiente">▶︎</button>
-                    </div>
-                </article>
-            </main>
-            <!-- Sección de información del parque -->
-            <article class="park-info">
                 <div class="galeria-item">
                     <img src="<?php echo $parque['park_info']; ?>" alt="Imagen informativa del parque">
                 </div>
@@ -198,29 +189,6 @@ $parque = $parques[$parque_id];
                 </div>
             </section>
         </article>
-    </div>
-
-            </article>
-        </div>
-        <!-- Sección de información -->
-        <article class="info-container">
-            <div class="lines">
-                <img src="../images/fotos/Planetas_Sedes/azul_y_rojo.png" alt="Decoración azul y rojo">
-            </div>
-            <section class="hablemos-content">
-                <div class="dominick-container">
-                    <img src="../images/fotos/Planetas_Sedes/dominick.png" alt="Dominick">
-                </div>
-                <div class="hablemos-button">
-                    <p><span>¡Hola!</span> <br>Estoy aquí para ayudarte</p>
-                    <a href="https://wa.me/573118090610" class="whatsapp" target="_blank">
-                        <img src="../images/fotos/Planetas_Sedes/hablemos.png" alt="Hablemos">
-                    </a>
-                </div>
-            </section>
-        </article>
-    </div>
-
 </div>
 <!-- Botones de whatsapp y dominick, lado derecho -->
 <?php

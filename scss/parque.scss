@@ -5,13 +5,6 @@
 }
 
 .info-parques-floor {
-.sedes-space-background {
-  width: 100%;
-  height: auto;
-  background-color: #314c9c;
-}
-
-.info-parques-floor {
   background-image: url("../images/fotos/Planetas_Sedes/piso.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -24,7 +17,7 @@
   top: -10rem;
   left: 0;
   width: 100%;
-  height: 55rem;
+  height: 60rem;
 
   img {
     width: 100%;
@@ -81,15 +74,7 @@
   width: 100%;
   height: auto;
   margin-bottom: 3rem;
-  // background-color: #41064585;
-.parque-images-floor {
-  width: 100%;
-  height: auto;
-  margin-bottom: 3rem;
-  // background-color: #41064585;
 
-  /* Estilos para el park-info fuera del contenedor main */
-  .park-info {
   /* Estilos para el park-info fuera del contenedor main */
   .park-info {
     display: flex;
@@ -217,65 +202,21 @@
   /* Estilos para los controles del carrusel */
   .park-carousel .carousel-controls {
     position: absolute;
-    margin: 2rem 0;
+    margin: 2rem auto;
+    /* Cambia 0 por auto para centrar horizontalmente */
     left: 0;
     right: 0;
-      border: none;
-      border-radius: 2rem;
-    }
-  }
-
-
-  /* Clases para las posiciones de los elementos del carrusel */
-  .park-carousel-item.active {
-    opacity: 1;
-    transform: scale(1) translateX(0) translateY(0) translateZ(0);
-    z-index: 5;
-    box-shadow: 0 1rem 1rem rgba(46, 46, 46, 0.623);
-  }
-
-  .park-carousel-item.prev {
-    opacity: 0.7;
-    transform: scale(0.85) translateX(-90%) translateY(0) translateZ(-6.25rem);
-    z-index: 2;
-  }
-
-  .park-carousel-item.next {
-    opacity: 0.7;
-    transform: scale(0.85) translateX(90%) translateY(0) translateZ(-6.25rem);
-    z-index: 2;
-  }
-
-  .park-carousel-item.far-prev {
-    opacity: 0.3;
-    transform: scale(0.7) translateX(-180%) translateY(0) translateZ(-12.5rem);
-    z-index: 1;
-  }
-
-  .park-carousel-item.far-next {
-    opacity: 0.3;
-    transform: scale(0.7) translateX(180%) translateY(0) translateZ(-12.5rem);
-    z-index: 1;
-  }
-
-  .park-carousel-item.back {
-    opacity: 0.3;
-    transform: scale(0.6) translateY(10%) translateZ(-18.75rem);
-    z-index: 0;
-  }
-
-  /* Estilos para los controles del carrusel */
-  .park-carousel .carousel-controls {
-    position: absolute;
-    margin: 2rem 0;
-    left: 0;
-    right: 0;
+    border: none;
+    border-radius: 2rem;
     display: flex;
+    /* Añade display flex */
     justify-content: center;
+    /* Centra los elementos horizontalmente */
     align-items: center;
-    gap: 10rem;
-    z-index: 10;
+    /* Centra los elementos verticalmente */
+    gap: 2rem;
   }
+
 
   .park-carousel .carousel-prev,
   .park-carousel .carousel-next {
@@ -318,47 +259,6 @@
     transform: scale(1.2);
     gap: 10rem;
     z-index: 10;
-  }
-
-  .park-carousel .carousel-prev,
-  .park-carousel .carousel-next {
-    width: 3.125rem;
-    height: 3.125rem;
-    background: rgba(255, 255, 255, 0.8);
-    border: none;
-    border-radius: 50%;
-    font-size: 24px;
-    cursor: pointer;
-    box-shadow: 0 0.125rem 0.9rem rgb(99, 181, 192);
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .park-carousel .carousel-prev:hover,
-  .park-carousel .carousel-next:hover {
-    background: rgb(122, 228, 228);
-    transform: scale(1.1);
-  }
-
-  .park-carousel .carousel-indicators {
-    display: flex;
-    gap: 10px;
-  }
-
-  .park-carousel .indicator {
-    width: 12px;
-    height: 12px;
-    background: rgb(149, 160, 160);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .park-carousel .indicator.active {
-    background: rgb(59, 255, 255);
-    transform: scale(1.2);
   }
 }
 
@@ -379,99 +279,71 @@
       object-fit: fill;
     }
   }
+}
+
+
+.hablemos-content {
+  width: 100%;
+  height: 70rem;
+  padding-top: 3rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  top: -8rem;
+
+  .dominick-container {
+    width: 50%;
+    height: 100%;
+    margin-left: 2rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
     }
   }
 
-  .hablemos-content {
+  img {
     width: 100%;
-    height: 70rem;
-    padding-top: 3rem;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    top: -8rem;
+    height: 100%;
+    object-fit: fill;
+  }
+}
 
-    .dominick-container {
-      width: 50%;
-      height: 100%;
-      margin-left: 2rem;
-    .dominick-container {
-      width: 50%;
-      height: 100%;
-      margin-left: 2rem;
+.hablemos-button {
+  width: 50%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* background-color: rgba(63, 177, 78, 0.404); */
+  margin-left: 2rem;
 
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: fill;
-      }
+  img {
+    width: 20rem;
+    height: 5rem;
+    object-fit: fill;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
     }
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: fill;
-      }
-    }
+  }
 
-    .hablemos-button {
-      width: 50%;
-      height: 90%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      /* background-color: rgba(63, 177, 78, 0.404); */
-      margin-left: 2rem;
-    .hablemos-button {
-      width: 50%;
-      height: 90%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      /* background-color: rgba(63, 177, 78, 0.404); */
-      margin-left: 2rem;
+  span {
+    font-size: 3.8rem;
+  }
 
-      img {
-        width: 20rem;
-        height: 5rem;
-        object-fit: fill;
-        transition: transform 0.3s ease-in-out;
-
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
-      img {
-        width: 20rem;
-        height: 5rem;
-        object-fit: fill;
-        transition: transform 0.3s ease-in-out;
-
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
-
-      span {
-        font-size: 3.8rem;
-      }
-      span {
-        font-size: 3.8rem;
-      }
-
-      p {
-        color: #ffffff;
-        text-shadow: 0 0 5px #00eeffd3, 0 0 10px #00eeffd3, 0 0 15px #00eeffd3;
-        text-align: center;
-        font-size: 3em;
-        font-weight: bold;
-        margin: 2rem 2rem;
-      }
-    }
+  p {
+    color: #ffffff;
+    text-shadow: 0 0 5px #00eeffd3, 0 0 10px #00eeffd3, 0 0 15px #00eeffd3;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    margin: 2rem 2rem;
   }
 }
 

@@ -21,12 +21,6 @@ include_once '../includes/head.php';
                     <h3>SELECCIONA TU EVENTO</h3>
                     <div class="service-options">
                         <label class="service-option">
-                            <input type="radio" name="tipo_evento" value="cumpleanos">
-                            <span class="option-content">
-                                <img src="../images/fotos/servicios/imagenes/CelebraCumple.png" alt="Cotizar evento Cumpleaños">
-                            </span>
-                        </label>
-                        <label class="service-option">
                             <input type="radio" name="tipo_evento" value="colegios">
                             <span class="option-content">
                                 <img src="../images/fotos/servicios/imagenes/FiestasColegios.png" alt="Cotizar evento Colegios">
